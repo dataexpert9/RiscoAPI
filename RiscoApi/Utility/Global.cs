@@ -151,6 +151,24 @@ namespace BasketApi
             Image = 1,
             Video = 2
         }
+        
+        public enum PostTaggingPrivacyTypes
+        {
+            Anyone = 1,
+            Following = 2,
+            Follower = 3,
+            NotAllowed = 4
+        }
+
+        public enum DirectMessagePrivacyTypes
+        {
+            Anyone = 1,
+            Following = 2,
+            Follower = 3,
+            NotAllowed = 4
+        }
+
+      
 
         public class ResponseMessages
         {

@@ -171,27 +171,8 @@ namespace DAL
 
         #region Post Tagging
 
-        /// <summary>
-        /// Is Allow Anyone To Tag You In Posts
-        /// </summary>
-        public bool TagAnyone { get; set; }
-
-        /// <summary>
-        /// Is Allow Only People You Follow To Tag You In Posts
-        /// </summary>
-
-        public bool TagYouFollow { get; set; }
-
-        /// <summary>
-        /// Is Allow People Who Follow Me To Tag You In Posts
-        /// </summary>
-
-        public bool TagFollowMe { get; set; }
-
-        /// <summary>
-        /// Is Dont Allow Anyone To Tag You In Posts
-        /// </summary>
-        public bool TagNotAllowed { get; set; }
+       
+        public int TaggingPrivacy { get; set; }
 
         #endregion
 
@@ -204,26 +185,8 @@ namespace DAL
         #endregion
 
         #region Direct Messages
-
-        /// <summary>
-        /// Is Allow AnyOne To Send Direct Message
-        /// </summary>
-        public bool MessageAnyone { get; set; }
-
-        /// <summary>
-        /// Is Allow Only People You Follow To Send Direct Message
-        /// </summary>
-        public bool MessageYouFollow { get; set; }
-
-        /// <summary>
-        /// Is Allow People Who Follow Me To Send Direct Message
-        /// </summary>
-        public bool MessageFollowMe { get; set; }
-
-        /// <summary>
-        /// Is Dont Allow AnyOne To Send Direct Message
-        /// </summary>
-        public bool MessageNotAllowed { get; set; }
+        
+        public int MessagePrivacy { get; set; }
 
         #endregion
 

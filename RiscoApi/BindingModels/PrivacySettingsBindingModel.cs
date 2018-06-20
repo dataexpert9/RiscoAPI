@@ -12,16 +12,7 @@ namespace WebApplication1.BindingModels
         public bool IsPostLocation { get; set; }
 
         [Required]
-        public bool TagAnyone { get; set; }
-
-        [Required]
-        public bool TagYouFollow { get; set; }
-
-        [Required]
-        public bool TagFollowMe { get; set; }
-
-        [Required]
-        public bool TagNotAllowed { get; set; }
+        public int TaggingPrivacy { get; set; }
 
         [Required]
         public bool FindByEmail { get; set; }
@@ -30,16 +21,6 @@ namespace WebApplication1.BindingModels
         public bool FindByPhone { get; set; }
 
         [Required]
-        public bool MessageAnyone { get; set; }
-
-        [Required]
-        public bool MessageYouFollow { get; set; }
-
-        [Required]
-        public bool MessageFollowMe { get; set; }
-
-        [Required]
-        public bool MessageNotAllowed { get; set; }
-
+        public int MessagePrivacy { get; set; }
     }
 }

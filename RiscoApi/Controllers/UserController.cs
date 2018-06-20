@@ -1763,18 +1763,11 @@ http://www.skriblbox.com
 					User UserResult = ctx.Users.FirstOrDefault(x => x.Id == userId);
 
 					UserResult.IsPostLocation = model.IsPostLocation;
-					UserResult.TagAnyone = model.TagAnyone;
-					UserResult.TagYouFollow = model.TagYouFollow;
-					UserResult.TagFollowMe = model.TagFollowMe;
-					UserResult.TagNotAllowed = model.TagNotAllowed;
-					UserResult.FindByEmail = model.FindByEmail;
-					UserResult.FindByPhone = model.FindByPhone;
-					UserResult.MessageAnyone = model.MessageAnyone;
-					UserResult.MessageYouFollow = model.MessageYouFollow;
-					UserResult.MessageFollowMe = model.MessageFollowMe;
-					UserResult.MessageNotAllowed = model.MessageNotAllowed;
-
-					ctx.SaveChanges();
+					UserResult.TaggingPrivacy = model.TaggingPrivacy;
+                    UserResult.FindByEmail = model.FindByEmail;
+                    UserResult.FindByPhone = model.FindByPhone;
+                    UserResult.MessagePrivacy = model.MessagePrivacy;
+                    ctx.SaveChanges();
 
 					return Ok();
 				}

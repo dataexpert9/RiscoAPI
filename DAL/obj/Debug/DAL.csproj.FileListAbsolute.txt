@@ -208,3 +208,38 @@ F:\VS\GitRepository\RiscoApi2\DAL\obj\Debug\DAL.Migrations.asd5.resources
 F:\VS\GitRepository\RiscoApi2\DAL\obj\Debug\DAL.csproj.GenerateResource.Cache
 F:\VS\GitRepository\RiscoApi2\DAL\obj\Debug\DAL.dll
 F:\VS\GitRepository\RiscoApi2\DAL\obj\Debug\DAL.pdb
+C:\.net projects\RiscoApi3\DAL\bin\Debug\DAL.dll.config
+C:\.net projects\RiscoApi3\DAL\bin\Debug\DAL.dll
+C:\.net projects\RiscoApi3\DAL\bin\Debug\DAL.pdb
+C:\.net projects\RiscoApi3\DAL\bin\Debug\EntityFramework.dll
+C:\.net projects\RiscoApi3\DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\.net projects\RiscoApi3\DAL\bin\Debug\Newtonsoft.Json.dll
+C:\.net projects\RiscoApi3\DAL\bin\Debug\PushSharp.Amazon.dll
+C:\.net projects\RiscoApi3\DAL\bin\Debug\PushSharp.Apple.dll
+C:\.net projects\RiscoApi3\DAL\bin\Debug\PushSharp.Blackberry.dll
+C:\.net projects\RiscoApi3\DAL\bin\Debug\PushSharp.Core.dll
+C:\.net projects\RiscoApi3\DAL\bin\Debug\PushSharp.Firefox.dll
+C:\.net projects\RiscoApi3\DAL\bin\Debug\PushSharp.Google.dll
+C:\.net projects\RiscoApi3\DAL\bin\Debug\PushSharp.Windows.dll
+C:\.net projects\RiscoApi3\DAL\bin\Debug\System.Net.Http.Formatting.dll
+C:\.net projects\RiscoApi3\DAL\bin\Debug\System.Web.Cors.dll
+C:\.net projects\RiscoApi3\DAL\bin\Debug\System.Web.Http.Cors.dll
+C:\.net projects\RiscoApi3\DAL\bin\Debug\System.Web.Http.dll
+C:\.net projects\RiscoApi3\DAL\bin\Debug\Z.EntityFramework.Plus.EF6.dll
+C:\.net projects\RiscoApi3\DAL\bin\Debug\EntityFramework.xml
+C:\.net projects\RiscoApi3\DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\.net projects\RiscoApi3\DAL\bin\Debug\Newtonsoft.Json.xml
+C:\.net projects\RiscoApi3\DAL\bin\Debug\System.Net.Http.Formatting.xml
+C:\.net projects\RiscoApi3\DAL\bin\Debug\System.Web.Http.xml
+C:\.net projects\RiscoApi3\DAL\bin\Debug\System.Web.Http.Cors.xml
+C:\.net projects\RiscoApi3\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\.net projects\RiscoApi3\DAL\obj\Debug\DAL.Migrations.asd.resources
+C:\.net projects\RiscoApi3\DAL\obj\Debug\DAL.Migrations.asdasd.resources
+C:\.net projects\RiscoApi3\DAL\obj\Debug\DAL.Migrations.asd1.resources
+C:\.net projects\RiscoApi3\DAL\obj\Debug\DAL.Migrations.asd2.resources
+C:\.net projects\RiscoApi3\DAL\obj\Debug\DAL.Migrations.asd3.resources
+C:\.net projects\RiscoApi3\DAL\obj\Debug\DAL.Migrations.asd4.resources
+C:\.net projects\RiscoApi3\DAL\obj\Debug\DAL.Migrations.asd5.resources
+C:\.net projects\RiscoApi3\DAL\obj\Debug\DAL.csproj.GenerateResource.Cache
+C:\.net projects\RiscoApi3\DAL\obj\Debug\DAL.dll
+C:\.net projects\RiscoApi3\DAL\obj\Debug\DAL.pdb
