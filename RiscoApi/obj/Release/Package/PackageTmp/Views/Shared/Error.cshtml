@@ -1,0 +1,70 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link rel="shortcut icon" href="~/Content/Images/favicon.ico" />
+    <title>Success</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        html, body {
+            height: 100%;
+            min-height: 100%;
+        }
+
+        .wrapper {
+            min-height: 100%;
+            height: auto !important;
+            height: 100%;
+            margin: 0 auto -142px; /* the bottom margin is the negative value of the footer's height */
+        }
+
+        .footer, .push {
+            height: 25px; /* .push must be the same height as .footer */
+            bottom: 0px;
+            margin-bottom: 0px;
+            overflow: hidden;
+            position: relative;
+            margin-top: 140px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top " style="background-color:#4d187c">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <h3 style="color:white">Basket App</h3>
+            </div>
+        </div>
+
+    </div>
+    <div class="container body-content wrapper" style="height:100%; min-height:100%">
+        <div id="main" class="container clear-top">
+            <hgroup>
+                <h1>Error</h1>
+                <h2>An error occurred while processing your request.</h2>
+            </hgroup>
+        </div>
+        <div class="push"></div>
+    </div>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+</body>
+</html>
+
+
+

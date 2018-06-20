@@ -1,0 +1,210 @@
+F:\VS\GitRepository\BasketApp\DAL\bin\Debug\DAL.dll.config
+F:\VS\GitRepository\BasketApp\DAL\bin\Debug\DAL.dll
+F:\VS\GitRepository\BasketApp\DAL\bin\Debug\DAL.pdb
+F:\VS\GitRepository\BasketApp\DAL\bin\Debug\EntityFramework.dll
+F:\VS\GitRepository\BasketApp\DAL\bin\Debug\EntityFramework.SqlServer.dll
+F:\VS\GitRepository\BasketApp\DAL\bin\Debug\Newtonsoft.Json.dll
+F:\VS\GitRepository\BasketApp\DAL\bin\Debug\PushSharp.Amazon.dll
+F:\VS\GitRepository\BasketApp\DAL\bin\Debug\PushSharp.Apple.dll
+F:\VS\GitRepository\BasketApp\DAL\bin\Debug\PushSharp.Blackberry.dll
+F:\VS\GitRepository\BasketApp\DAL\bin\Debug\PushSharp.Core.dll
+F:\VS\GitRepository\BasketApp\DAL\bin\Debug\PushSharp.Firefox.dll
+F:\VS\GitRepository\BasketApp\DAL\bin\Debug\PushSharp.Google.dll
+F:\VS\GitRepository\BasketApp\DAL\bin\Debug\PushSharp.Windows.dll
+F:\VS\GitRepository\BasketApp\DAL\bin\Debug\EntityFramework.xml
+F:\VS\GitRepository\BasketApp\DAL\bin\Debug\EntityFramework.SqlServer.xml
+F:\VS\GitRepository\BasketApp\DAL\bin\Debug\Newtonsoft.Json.xml
+F:\VS\GitRepository\BasketApp\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+F:\VS\GitRepository\BasketApp\DAL\obj\Debug\DAL.Migrations.asd.resources
+F:\VS\GitRepository\BasketApp\DAL\obj\Debug\DAL.Migrations.asdasd.resources
+F:\VS\GitRepository\BasketApp\DAL\obj\Debug\DAL.Migrations.asd1.resources
+F:\VS\GitRepository\BasketApp\DAL\obj\Debug\DAL.Migrations.asd2.resources
+F:\VS\GitRepository\BasketApp\DAL\obj\Debug\DAL.Migrations.asd3.resources
+F:\VS\GitRepository\BasketApp\DAL\obj\Debug\DAL.Migrations.asd4.resources
+F:\VS\GitRepository\BasketApp\DAL\obj\Debug\DAL.Migrations.asd5.resources
+F:\VS\GitRepository\BasketApp\DAL\obj\Debug\DAL.csproj.GenerateResource.Cache
+F:\VS\GitRepository\BasketApp\DAL\obj\Debug\DAL.dll
+F:\VS\GitRepository\BasketApp\DAL\obj\Debug\DAL.pdb
+D:\Skribl\SkriblApi\DAL\bin\Debug\DAL.dll.config
+D:\Skribl\SkriblApi\DAL\bin\Debug\DAL.dll
+D:\Skribl\SkriblApi\DAL\bin\Debug\DAL.pdb
+D:\Skribl\SkriblApi\DAL\bin\Debug\EntityFramework.dll
+D:\Skribl\SkriblApi\DAL\bin\Debug\EntityFramework.SqlServer.dll
+D:\Skribl\SkriblApi\DAL\bin\Debug\Newtonsoft.Json.dll
+D:\Skribl\SkriblApi\DAL\bin\Debug\PushSharp.Amazon.dll
+D:\Skribl\SkriblApi\DAL\bin\Debug\PushSharp.Apple.dll
+D:\Skribl\SkriblApi\DAL\bin\Debug\PushSharp.Blackberry.dll
+D:\Skribl\SkriblApi\DAL\bin\Debug\PushSharp.Core.dll
+D:\Skribl\SkriblApi\DAL\bin\Debug\PushSharp.Firefox.dll
+D:\Skribl\SkriblApi\DAL\bin\Debug\PushSharp.Google.dll
+D:\Skribl\SkriblApi\DAL\bin\Debug\PushSharp.Windows.dll
+D:\Skribl\SkriblApi\DAL\bin\Debug\EntityFramework.xml
+D:\Skribl\SkriblApi\DAL\bin\Debug\EntityFramework.SqlServer.xml
+D:\Skribl\SkriblApi\DAL\bin\Debug\Newtonsoft.Json.xml
+D:\Skribl\SkriblApi\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+D:\Skribl\SkriblApi\DAL\obj\Debug\DAL.Migrations.asd.resources
+D:\Skribl\SkriblApi\DAL\obj\Debug\DAL.Migrations.asdasd.resources
+D:\Skribl\SkriblApi\DAL\obj\Debug\DAL.Migrations.asd1.resources
+D:\Skribl\SkriblApi\DAL\obj\Debug\DAL.Migrations.asd2.resources
+D:\Skribl\SkriblApi\DAL\obj\Debug\DAL.Migrations.asd3.resources
+D:\Skribl\SkriblApi\DAL\obj\Debug\DAL.Migrations.asd4.resources
+D:\Skribl\SkriblApi\DAL\obj\Debug\DAL.Migrations.asd5.resources
+D:\Skribl\SkriblApi\DAL\obj\Debug\DAL.csproj.GenerateResource.Cache
+D:\Skribl\SkriblApi\DAL\obj\Debug\DAL.dll
+D:\Skribl\SkriblApi\DAL\obj\Debug\DAL.pdb
+F:\VS\GitRepository\SkriblApi\DAL\bin\Debug\DAL.dll.config
+F:\VS\GitRepository\SkriblApi\DAL\bin\Debug\DAL.dll
+F:\VS\GitRepository\SkriblApi\DAL\bin\Debug\DAL.pdb
+F:\VS\GitRepository\SkriblApi\DAL\bin\Debug\EntityFramework.dll
+F:\VS\GitRepository\SkriblApi\DAL\bin\Debug\EntityFramework.SqlServer.dll
+F:\VS\GitRepository\SkriblApi\DAL\bin\Debug\Newtonsoft.Json.dll
+F:\VS\GitRepository\SkriblApi\DAL\bin\Debug\PushSharp.Amazon.dll
+F:\VS\GitRepository\SkriblApi\DAL\bin\Debug\PushSharp.Apple.dll
+F:\VS\GitRepository\SkriblApi\DAL\bin\Debug\PushSharp.Blackberry.dll
+F:\VS\GitRepository\SkriblApi\DAL\bin\Debug\PushSharp.Core.dll
+F:\VS\GitRepository\SkriblApi\DAL\bin\Debug\PushSharp.Firefox.dll
+F:\VS\GitRepository\SkriblApi\DAL\bin\Debug\PushSharp.Google.dll
+F:\VS\GitRepository\SkriblApi\DAL\bin\Debug\PushSharp.Windows.dll
+F:\VS\GitRepository\SkriblApi\DAL\bin\Debug\EntityFramework.xml
+F:\VS\GitRepository\SkriblApi\DAL\bin\Debug\EntityFramework.SqlServer.xml
+F:\VS\GitRepository\SkriblApi\DAL\bin\Debug\Newtonsoft.Json.xml
+F:\VS\GitRepository\SkriblApi\DAL\obj\Debug\DAL.Migrations.asd.resources
+F:\VS\GitRepository\SkriblApi\DAL\obj\Debug\DAL.Migrations.asdasd.resources
+F:\VS\GitRepository\SkriblApi\DAL\obj\Debug\DAL.Migrations.asd1.resources
+F:\VS\GitRepository\SkriblApi\DAL\obj\Debug\DAL.Migrations.asd2.resources
+F:\VS\GitRepository\SkriblApi\DAL\obj\Debug\DAL.Migrations.asd3.resources
+F:\VS\GitRepository\SkriblApi\DAL\obj\Debug\DAL.Migrations.asd4.resources
+F:\VS\GitRepository\SkriblApi\DAL\obj\Debug\DAL.Migrations.asd5.resources
+F:\VS\GitRepository\SkriblApi\DAL\obj\Debug\DAL.csproj.GenerateResource.Cache
+F:\VS\GitRepository\SkriblApi\DAL\obj\Debug\DAL.dll
+F:\VS\GitRepository\SkriblApi\DAL\obj\Debug\DAL.pdb
+F:\VS\GitRepository\SkriblApi\DAL\bin\Debug\Z.EntityFramework.Plus.EF6.dll
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\DAL\bin\Debug\DAL.dll.config
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\DAL\bin\Debug\DAL.dll
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\DAL\bin\Debug\DAL.pdb
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\DAL\bin\Debug\EntityFramework.dll
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\DAL\bin\Debug\EntityFramework.SqlServer.dll
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\DAL\bin\Debug\Newtonsoft.Json.dll
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\DAL\bin\Debug\PushSharp.Amazon.dll
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\DAL\bin\Debug\PushSharp.Apple.dll
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\DAL\bin\Debug\PushSharp.Blackberry.dll
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\DAL\bin\Debug\PushSharp.Core.dll
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\DAL\bin\Debug\PushSharp.Firefox.dll
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\DAL\bin\Debug\PushSharp.Google.dll
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\DAL\bin\Debug\PushSharp.Windows.dll
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\DAL\bin\Debug\Z.EntityFramework.Plus.EF6.dll
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\DAL\bin\Debug\EntityFramework.xml
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\DAL\bin\Debug\EntityFramework.SqlServer.xml
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\DAL\bin\Debug\Newtonsoft.Json.xml
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\DAL\obj\Debug\DAL.Migrations.asd.resources
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\DAL\obj\Debug\DAL.Migrations.asdasd.resources
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\DAL\obj\Debug\DAL.Migrations.asd1.resources
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\DAL\obj\Debug\DAL.Migrations.asd2.resources
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\DAL\obj\Debug\DAL.Migrations.asd3.resources
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\DAL\obj\Debug\DAL.Migrations.asd4.resources
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\DAL\obj\Debug\DAL.Migrations.asd5.resources
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\DAL\obj\Debug\DAL.csproj.GenerateResource.Cache
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\DAL\obj\Debug\DAL.dll
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\DAL\obj\Debug\DAL.pdb
+F:\VS\GitRepository\SkriblApi\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+F:\Projects\Skribl\SkriblApi\DAL\bin\Debug\DAL.dll.config
+F:\Projects\Skribl\SkriblApi\DAL\bin\Debug\DAL.dll
+F:\Projects\Skribl\SkriblApi\DAL\bin\Debug\DAL.pdb
+F:\Projects\Skribl\SkriblApi\DAL\bin\Debug\EntityFramework.dll
+F:\Projects\Skribl\SkriblApi\DAL\bin\Debug\EntityFramework.SqlServer.dll
+F:\Projects\Skribl\SkriblApi\DAL\bin\Debug\Newtonsoft.Json.dll
+F:\Projects\Skribl\SkriblApi\DAL\bin\Debug\PushSharp.Amazon.dll
+F:\Projects\Skribl\SkriblApi\DAL\bin\Debug\PushSharp.Apple.dll
+F:\Projects\Skribl\SkriblApi\DAL\bin\Debug\PushSharp.Blackberry.dll
+F:\Projects\Skribl\SkriblApi\DAL\bin\Debug\PushSharp.Core.dll
+F:\Projects\Skribl\SkriblApi\DAL\bin\Debug\PushSharp.Firefox.dll
+F:\Projects\Skribl\SkriblApi\DAL\bin\Debug\PushSharp.Google.dll
+F:\Projects\Skribl\SkriblApi\DAL\bin\Debug\PushSharp.Windows.dll
+F:\Projects\Skribl\SkriblApi\DAL\bin\Debug\Z.EntityFramework.Plus.EF6.dll
+F:\Projects\Skribl\SkriblApi\DAL\bin\Debug\EntityFramework.xml
+F:\Projects\Skribl\SkriblApi\DAL\bin\Debug\EntityFramework.SqlServer.xml
+F:\Projects\Skribl\SkriblApi\DAL\bin\Debug\Newtonsoft.Json.xml
+F:\Projects\Skribl\SkriblApi\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+F:\Projects\Skribl\SkriblApi\DAL\obj\Debug\DAL.Migrations.asd.resources
+F:\Projects\Skribl\SkriblApi\DAL\obj\Debug\DAL.Migrations.asdasd.resources
+F:\Projects\Skribl\SkriblApi\DAL\obj\Debug\DAL.Migrations.asd1.resources
+F:\Projects\Skribl\SkriblApi\DAL\obj\Debug\DAL.Migrations.asd2.resources
+F:\Projects\Skribl\SkriblApi\DAL\obj\Debug\DAL.Migrations.asd3.resources
+F:\Projects\Skribl\SkriblApi\DAL\obj\Debug\DAL.Migrations.asd4.resources
+F:\Projects\Skribl\SkriblApi\DAL\obj\Debug\DAL.Migrations.asd5.resources
+F:\Projects\Skribl\SkriblApi\DAL\obj\Debug\DAL.csproj.GenerateResource.Cache
+F:\Projects\Skribl\SkriblApi\DAL\obj\Debug\DAL.dll
+F:\Projects\Skribl\SkriblApi\DAL\obj\Debug\DAL.pdb
+F:\MyGitLab\Risco\DAL\bin\Debug\DAL.dll.config
+F:\MyGitLab\Risco\DAL\bin\Debug\DAL.dll
+F:\MyGitLab\Risco\DAL\bin\Debug\DAL.pdb
+F:\MyGitLab\Risco\DAL\bin\Debug\EntityFramework.dll
+F:\MyGitLab\Risco\DAL\bin\Debug\EntityFramework.SqlServer.dll
+F:\MyGitLab\Risco\DAL\bin\Debug\Newtonsoft.Json.dll
+F:\MyGitLab\Risco\DAL\bin\Debug\PushSharp.Amazon.dll
+F:\MyGitLab\Risco\DAL\bin\Debug\PushSharp.Apple.dll
+F:\MyGitLab\Risco\DAL\bin\Debug\PushSharp.Blackberry.dll
+F:\MyGitLab\Risco\DAL\bin\Debug\PushSharp.Core.dll
+F:\MyGitLab\Risco\DAL\bin\Debug\PushSharp.Firefox.dll
+F:\MyGitLab\Risco\DAL\bin\Debug\PushSharp.Google.dll
+F:\MyGitLab\Risco\DAL\bin\Debug\PushSharp.Windows.dll
+F:\MyGitLab\Risco\DAL\bin\Debug\System.Net.Http.Formatting.dll
+F:\MyGitLab\Risco\DAL\bin\Debug\System.Web.Cors.dll
+F:\MyGitLab\Risco\DAL\bin\Debug\System.Web.Http.Cors.dll
+F:\MyGitLab\Risco\DAL\bin\Debug\System.Web.Http.dll
+F:\MyGitLab\Risco\DAL\bin\Debug\Z.EntityFramework.Plus.EF6.dll
+F:\MyGitLab\Risco\DAL\bin\Debug\EntityFramework.xml
+F:\MyGitLab\Risco\DAL\bin\Debug\EntityFramework.SqlServer.xml
+F:\MyGitLab\Risco\DAL\bin\Debug\Newtonsoft.Json.xml
+F:\MyGitLab\Risco\DAL\bin\Debug\System.Net.Http.Formatting.xml
+F:\MyGitLab\Risco\DAL\bin\Debug\System.Web.Http.xml
+F:\MyGitLab\Risco\DAL\bin\Debug\System.Web.Http.Cors.xml
+F:\MyGitLab\Risco\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+F:\MyGitLab\Risco\DAL\obj\Debug\DAL.Migrations.asd.resources
+F:\MyGitLab\Risco\DAL\obj\Debug\DAL.Migrations.asdasd.resources
+F:\MyGitLab\Risco\DAL\obj\Debug\DAL.Migrations.asd1.resources
+F:\MyGitLab\Risco\DAL\obj\Debug\DAL.Migrations.asd2.resources
+F:\MyGitLab\Risco\DAL\obj\Debug\DAL.Migrations.asd3.resources
+F:\MyGitLab\Risco\DAL\obj\Debug\DAL.Migrations.asd4.resources
+F:\MyGitLab\Risco\DAL\obj\Debug\DAL.Migrations.asd5.resources
+F:\MyGitLab\Risco\DAL\obj\Debug\DAL.csproj.GenerateResource.cache
+F:\MyGitLab\Risco\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+F:\MyGitLab\Risco\DAL\obj\Debug\DAL.csproj.CopyComplete
+F:\MyGitLab\Risco\DAL\obj\Debug\DAL.dll
+F:\MyGitLab\Risco\DAL\obj\Debug\DAL.pdb
+F:\VS\GitRepository\RiscoApi2\DAL\bin\Debug\DAL.dll.config
+F:\VS\GitRepository\RiscoApi2\DAL\bin\Debug\DAL.dll
+F:\VS\GitRepository\RiscoApi2\DAL\bin\Debug\DAL.pdb
+F:\VS\GitRepository\RiscoApi2\DAL\bin\Debug\EntityFramework.dll
+F:\VS\GitRepository\RiscoApi2\DAL\bin\Debug\EntityFramework.SqlServer.dll
+F:\VS\GitRepository\RiscoApi2\DAL\bin\Debug\Newtonsoft.Json.dll
+F:\VS\GitRepository\RiscoApi2\DAL\bin\Debug\PushSharp.Amazon.dll
+F:\VS\GitRepository\RiscoApi2\DAL\bin\Debug\PushSharp.Apple.dll
+F:\VS\GitRepository\RiscoApi2\DAL\bin\Debug\PushSharp.Blackberry.dll
+F:\VS\GitRepository\RiscoApi2\DAL\bin\Debug\PushSharp.Core.dll
+F:\VS\GitRepository\RiscoApi2\DAL\bin\Debug\PushSharp.Firefox.dll
+F:\VS\GitRepository\RiscoApi2\DAL\bin\Debug\PushSharp.Google.dll
+F:\VS\GitRepository\RiscoApi2\DAL\bin\Debug\PushSharp.Windows.dll
+F:\VS\GitRepository\RiscoApi2\DAL\bin\Debug\System.Net.Http.Formatting.dll
+F:\VS\GitRepository\RiscoApi2\DAL\bin\Debug\System.Web.Cors.dll
+F:\VS\GitRepository\RiscoApi2\DAL\bin\Debug\System.Web.Http.Cors.dll
+F:\VS\GitRepository\RiscoApi2\DAL\bin\Debug\System.Web.Http.dll
+F:\VS\GitRepository\RiscoApi2\DAL\bin\Debug\Z.EntityFramework.Plus.EF6.dll
+F:\VS\GitRepository\RiscoApi2\DAL\bin\Debug\EntityFramework.xml
+F:\VS\GitRepository\RiscoApi2\DAL\bin\Debug\EntityFramework.SqlServer.xml
+F:\VS\GitRepository\RiscoApi2\DAL\bin\Debug\Newtonsoft.Json.xml
+F:\VS\GitRepository\RiscoApi2\DAL\bin\Debug\System.Net.Http.Formatting.xml
+F:\VS\GitRepository\RiscoApi2\DAL\bin\Debug\System.Web.Http.xml
+F:\VS\GitRepository\RiscoApi2\DAL\bin\Debug\System.Web.Http.Cors.xml
+F:\VS\GitRepository\RiscoApi2\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+F:\VS\GitRepository\RiscoApi2\DAL\obj\Debug\DAL.Migrations.asd.resources
+F:\VS\GitRepository\RiscoApi2\DAL\obj\Debug\DAL.Migrations.asdasd.resources
+F:\VS\GitRepository\RiscoApi2\DAL\obj\Debug\DAL.Migrations.asd1.resources
+F:\VS\GitRepository\RiscoApi2\DAL\obj\Debug\DAL.Migrations.asd2.resources
+F:\VS\GitRepository\RiscoApi2\DAL\obj\Debug\DAL.Migrations.asd3.resources
+F:\VS\GitRepository\RiscoApi2\DAL\obj\Debug\DAL.Migrations.asd4.resources
+F:\VS\GitRepository\RiscoApi2\DAL\obj\Debug\DAL.Migrations.asd5.resources
+F:\VS\GitRepository\RiscoApi2\DAL\obj\Debug\DAL.csproj.GenerateResource.Cache
+F:\VS\GitRepository\RiscoApi2\DAL\obj\Debug\DAL.dll
+F:\VS\GitRepository\RiscoApi2\DAL\obj\Debug\DAL.pdb

@@ -1,0 +1,11 @@
+{
+  "User": {
+    "id": 7,
+    "username": "muhammadmohsin",
+    "name": "Muhammad Mohsin",
+    "email": "muhammadmohsin@axact.com",
+    "new_portrait": null,
+    "host": "http://gitlab.axact.com",
+    "two_factor_enabled": false
+  }
+}

@@ -1,0 +1,514 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.1",
+    "title": "Webservices For Test Project",
+    
+  },
+  "host": "localhost:50915",
+  "basePath": "/api/User",
+  
+  "tags": [
+    {
+      "name": "Login",
+      "description": "Login Services"
+    },
+    {
+      "name": "Signup",
+      "description": "Signup Services"
+    }
+  ],
+  "schemes": [
+    "http"
+  ],
+   "paths": {
+    
+  "/Login": {
+      
+      "post": {
+        "description": "Login User",
+        "summary": "Login User Into System",
+        "tags": [
+          "User"
+        ],
+        "operationId": "Login User",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "email",
+            "in": "formData",
+            "required": true,
+            "type": "string",
+            "description": "Email Address Of User"
+          },
+		  {
+            "name": "password",
+            "in": "formData",
+            "required": true,
+            "type": "string",
+            "description": "Password Of Email In Above Field"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+  
+   "/Register": {
+      
+      "post": {
+        "description": "Register or SignUp",
+        "summary": "Register a new account",
+        "tags": [
+          "User"
+        ],
+        "operationId": "Register",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "email",
+            "in": "formData",
+            "required": true,
+            "type": "string",
+            "description": "Email Address Of User"
+          },
+		  {
+            "name": "password",
+            "in": "formData",
+            "required": true,
+            "type": "string",
+            "description": "Password Of Email In Above Field"
+          },
+		  {
+            "name": "confirmpassword",
+            "in": "formData",
+            "required": true,
+            "type": "string",
+            "description": "Confirm password"
+          },
+		  {
+            "name": "fullname",
+            "in": "formData",
+            "required": true,
+            "type": "string",
+            "description": "Full Name of user"
+          },
+		  {
+            "name": "phonenumber",
+            "in": "formData",
+            "required": true,
+            "type": "string",
+            "description": "Cell Phone No"
+          },
+		  {
+            "name": "SignInType",
+            "in": "formData",
+            "required": true,
+            "type": "short",
+            "description": "0 for user, 1 for deliverer, 2 for sub admin, 3 for super admin"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+  
+  
+"/Logout": {
+      
+      "post": {
+        "description": "Logout User",
+        "summary": "Logout User from System",
+        "tags": [
+          "User"
+        ],
+        "operationId": "Logout User",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+		{
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": "Authorization token received"
+          },
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+	
+	"/RegisterWithImage": {
+      
+      "post": {
+        "description": "Multipart data request required along with fullname, email, password, confirmpassword, phonenumber, SignInType = 0 for User/1 for Deliverer",
+        "summary": "Logout User from System",
+		"consumes":"multipart/form-data",
+        "tags": [
+          "User"
+        ],
+        "operationId": "Logout User",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+		{
+			"name": "file",
+            "in": "formData",
+            "type": "file",
+			required:true,
+            "description": "The File to upload"
+		},
+		{
+			"name": "fullname",
+            "in": "formData",
+            "type": "string",
+			required:true,
+            "description": "Fullname"
+		},
+		{
+			"name": "email",
+            "in": "formData",
+            "type": "string",
+			required:true,
+            "description": "Email"
+		},
+		{
+			"name": "confirmpassword",
+            "in": "formData",
+            "type": "string",
+			required:true,
+            "description": "ConfirmPassword"
+		},
+		{
+			"name": "password",
+            "in": "formData",
+            "type": "string",
+			required:true,
+            "description": "Password"
+		},
+		{
+			"name": "phonenumber",
+            "in": "formData",
+            "type": "string",
+			required:true,
+            "description": "PhoneNumber"
+		},
+		{
+			"name": "signintype",
+            "in": "formData",
+            "type": "string",
+			required:true,
+            "description": "0 for user, 1 for deliverer"
+		}
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+	
+	"/SendVerificationSms": {
+      
+      "post": {
+        "description": "Will send verification code to phonenumber provided.",
+        "summary": "Sends Verification sms to phonenumber.",
+        "tags": [
+          "User"
+        ],
+        "operationId": "SendVerificationSms",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+		{
+			"name": "Authorization",
+            "in": "header",
+            "type": "string",
+            "description": "Authorization Token"
+		},
+		{
+			"name": "PhoneNumber",
+            "in": "formData",
+            "type": "string",
+            "description": "PhoneNumber to verify."
+		},
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+	
+	"/VerifySmsCode": {
+      
+      "post": {
+        "description": "Will send verification code to phonenumber provided.",
+        "summary": "Will verify if the entered code matches the code sent.",
+        "tags": [
+          "User"
+        ],
+        "operationId": "VerifySmsCode",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+		{
+			"name": "Authorization",
+            "in": "header",
+            "type": "string",
+            "description": "Authorization Token"
+		},
+		{
+			"name": "request_id",
+            "in": "formData",
+            "type": "string",
+            "description": "Request_id received thorugh SendVerificationSms."
+		},
+		{
+			"name": "code",
+            "in": "formData",
+            "type": "string",
+            "description": "Code entered on mobile."
+		},
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+	
+	"/ChangePassword": {
+      
+      "post": {
+        "description": "ChangePassword",
+        "summary": "ChangePassword.",
+        "tags": [
+          "User"
+        ],
+        "operationId": "ChangePassword",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+		{
+			"name": "Authorization",
+            "in": "header",
+            "type": "string",
+            "description": "Authorization Token"
+		},
+		{
+			"name": "NewPassword",
+            "in": "formData",
+            "type": "string",
+            "description": "New password."
+		},
+		{
+			"name": "ConfirmPassword",
+            "in": "formData",
+            "type": "string",
+            "description": "Confirm new password."
+		},
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+	
+	"/UploadUserImage": {
+      
+      "post": {
+        "description": "UploadUserImage",
+        "summary": "This will be used to replace profile picture of user.",
+        "tags": [
+          "User"
+        ],
+        "operationId": "UploadUserImage",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+		{
+			"name": "Authorization",
+            "in": "header",
+            "type": "string",
+            "description": "Authorization Token"
+		},
+		{
+			"name": "Picture",
+            "in": "multipart/form-data",
+            "type": "file",
+            "description": "Picture"
+		},
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+	"/UpdateUserProfileWithImage": {
+      
+      "post": {
+        "description": "UpdateUserProfileWithImage",
+        "summary": "This will be used to update user profile as multipart request.",
+		"consumes":"multipart/form-data",
+        "tags": [
+          "User"
+        ],
+        "operationId": "UploadUserImage",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+		{
+			"name": "Authorization",
+            "in": "header",
+            "type": "string",
+			"required":true,
+            "description": "Authorization Token"
+		},
+		{
+			"name": "file",
+            "in": "formData",
+            "type": "file",
+			required:true,
+            "description": "The File to upload"
+		},
+		{
+			"name": "ID",
+            "in": "formData",
+            "type": "string",
+			"required":true,
+            "description": "ID"
+		},
+		{
+			"name": "FirstName",
+            "in": "formData",
+            "type": "string",
+            "description": "FirstName"
+		},
+		{
+			"name": "LastName",
+            "in": "formData",
+            "type": "string",
+            "description": "LastName"
+		},
+		{
+			"name": "FullName",
+            "in": "formData",
+            "type": "string",
+			"required":true,
+            "description": "FullName"
+		},
+		{
+			"name": "Email",
+            "in": "formData",
+            "type": "string",
+			"required":true,
+            "description": "Email"
+		},
+		{
+			"name": "PhoneNumber",
+            "in": "formData",
+            "type": "string",
+			"required":true,
+            "description": "PhoneNumber"
+		},
+		{
+			"name": "Password",
+            "in": "formData",
+            "type": "string",
+			"required":true,
+            "description": "Password"
+		},
+		{
+			"name": "Status",
+            "in": "formData",
+            "type": "string",
+            "description": "Status"
+		},
+		{
+			"name": "ZipCode",
+            "in": "formData",
+            "type": "string",
+            "description": "ZipCode"
+		},
+		{
+			"name": "Address1",
+            "in": "formData",
+            "type": "string",
+            "description": "Address1"
+		},
+		{
+			"name": "Address2",
+            "in": "formData",
+            "type": "string",
+            "description": "Address2"
+		},
+		{
+			"name": "DateofBirth",
+            "in": "formData",
+            "type": "string",
+            "description": "DateofBirth"
+		},
+		{
+			"name": "SignInType",
+            "in": "formData",
+            "type": "string",
+			"required":true,
+            "description": "SignInType"
+		},
+		{
+			"name": "UserName",
+            "in": "formData",
+            "type": "string",
+            "description": "UserName"
+		},
+		{
+			"name": "EmailConfirmed",
+            "in": "formData",
+            "type": "boolean",
+            "description": "EmailConfirmed"
+		},
+		{
+			"name": "PhoneConfirmed",
+            "in": "formData",
+            "type": "boolean",
+            "description": "PhoneConfirmed"
+		}
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    }
+	},
+}

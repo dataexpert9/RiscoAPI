@@ -1,0 +1,175 @@
+﻿@model BasketApi.AppsViewModels.OrderViewModel
+
+@{
+    ViewBag.Title = "Invoice Report";
+}
+
+
+
+<h2>Invoice Report</h2>
+
+<style>
+    .invoice-title h2, .invoice-title h3 {
+        display: inline-block;
+    }
+
+    .table > tbody > tr > .no-line {
+        border-top: none;
+    }
+
+    .table > thead > tr > .no-line {
+        border-bottom: none;
+    }
+
+    .table > tbody > tr > .thick-line {
+        border-top: 2px solid;
+    }
+
+    .testClass {}
+
+      @@media only screen and (max-width:896px) {
+        #orderTotal {
+            position: relative !important;
+            top: -27px !important;
+        }
+
+</style>
+<div class="right_col" role="main" style="min-height: 715px;">
+    <div class="panel panel-default">
+        @*<div class="panel-heading">
+                <h3 class="panel-title"><strong>Order summary</strong></h3>
+            </div>*@
+        <div class="panel-body">
+
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="invoice-title">
+                        <h2>Invoice</h2><h3 class="pull-right">Order # @ViewData.Model.Id</h3>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <address>
+                                <strong>Billed To:</strong><br>
+                                @if (ViewData.Model.UserFullName != null)
+                                {
+                                    @ViewData.Model.UserFullName<br>
+                                }
+                                @ViewData.Model.User.Phone<br>
+                                @ViewData.Model.User.Email<br>
+                                @ViewData.Model.DeliveryAddress<br>
+                            </address>
+                        </div>
+                        <div class="col-xs-6 text-right">
+                            <address>
+                                <strong>Order Date:</strong>
+                                <br>
+                                @String.Format("{0:dddd, MMMM d, yyyy}", ViewData.Model.OrderDateTime)<br><br>
+                            </address>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <address>
+                                <strong>Payment Method:</strong>
+                                <p style="margin-bottom:0px;">@ViewData.Model.PaymentMethodName</p>
+                                <p>@ViewData.Model.User.Email</p>
+                            </address>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="table-responsive" style="border:0px;overflow-x:hidden;">
+                        <table class="table table-bordered table-striped ">
+                            <thead>
+                                <tr>
+                                    <td><strong>Item</strong></td>
+                                    <td class="text-center"><strong>Price</strong></td>
+                                    <td class="text-center"><strong>Quantity</strong></td>
+                                    <td class="text-right"><strong>Total</strong></td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- foreach ($order->lineItems as $line) or some such thing here -->
+                                @foreach (var item in @ViewData.Model.StoreOrders.FirstOrDefault().OrderItems) // verify this from mohsin
+                                {
+                                    <tr>
+                                        <td>@item.Name</td>
+                                        <td class="text-center">@(item.Price / item.Qty)</td>
+                                        <td class="text-center">@item.Qty</td>
+                                        <td class="text-right">@item.Price</td>
+                                    </tr>
+
+                                }
+                            </tbody>
+                        </table>
+                        <div class="row">
+                            <div class="col-md-11 col-sm-11 col-xs-11">
+                                <p style="float:right;">
+                                    <strong>
+                                        Subtotal :
+                                    </strong>
+                                </p>
+                            </div>
+                            <div class="col-md-1" style="float: right;word-wrap: break-word;text-align: right;">
+                                @Model.Subtotal
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-11 col-sm-11 col-xs-11">
+                                <p style="float:right;">
+                                    <strong>
+                                        Shipping :
+                                    </strong>
+                                </p>
+                            </div>
+                            <div class="col-md-1" style="float: right;word-wrap: break-word;text-align: right;">
+                                @(Model.DeliveryFee == 0 ? "Free" : @ViewData.Model.DeliveryFee.ToString())
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-11 col-sm-11 col-xs-11">
+                                <p style="float:right;">
+                                    <strong>
+                                        Tax :
+                                    </strong>
+                                </p>
+                            </div>
+                            <div class="col-md-1" style="float: right;word-wrap: break-word;text-align: right;">
+                                @Model.Tax.ToString()
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-11 col-sm-11 col-xs-11">
+                                <p style="float:right;">
+                                    <strong>
+                                        Total :
+                                    </strong>
+                                </p>
+                            </div>
+                            <div id="orderTotal" class="col-md-1" style="float: right;word-wrap: break-word;text-align: right;">
+                                AED @Model.Total
+                            </div>
+                        </div>
+                        @*<div>
+                                <td class="no-line" colspan="2"></td>
+
+                                <td class="no-line text-right"><strong>Shipping</strong></td>
+                                <td class="no-line text-right">$@Model.ServiceFee</td>
+                            </div>
+                            <div>
+                                <td class="no-line" colspan="2"></td>
+
+                                <td class="no-line text-right"><strong>Total</strong></td>
+                                <td class="no-line text-right">$@Model.Total AED</td>
+                            </div>*@
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

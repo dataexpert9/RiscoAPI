@@ -1,0 +1,502 @@
+D:\Skribl\SkriblApi\SkriblApi\bin\roslyn\csc.exe
+D:\Skribl\SkriblApi\SkriblApi\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Skribl\SkriblApi\SkriblApi\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Skribl\SkriblApi\SkriblApi\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Skribl\SkriblApi\SkriblApi\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Skribl\SkriblApi\SkriblApi\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Skribl\SkriblApi\SkriblApi\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Skribl\SkriblApi\SkriblApi\bin\roslyn\System.Collections.Immutable.dll
+D:\Skribl\SkriblApi\SkriblApi\bin\roslyn\System.Reflection.Metadata.dll
+D:\Skribl\SkriblApi\SkriblApi\bin\roslyn\vbc.exe
+D:\Skribl\SkriblApi\SkriblApi\bin\roslyn\VBCSCompiler.exe
+D:\Skribl\SkriblApi\SkriblApi\bin\roslyn\VBCSCompiler.exe.config
+D:\Skribl\SkriblApi\SkriblApi\bin\WebApplication1.dll.config
+D:\Skribl\SkriblApi\SkriblApi\bin\SkribleApiHelp.XML
+D:\Skribl\SkriblApi\SkriblApi\bin\WebApplication1.dll
+D:\Skribl\SkriblApi\SkriblApi\bin\WebApplication1.pdb
+D:\Skribl\SkriblApi\SkriblApi\bin\Antlr3.Runtime.dll
+D:\Skribl\SkriblApi\SkriblApi\bin\AutoMapper.dll
+D:\Skribl\SkriblApi\SkriblApi\bin\DAL.dll
+D:\Skribl\SkriblApi\SkriblApi\bin\EntityFramework.dll
+D:\Skribl\SkriblApi\SkriblApi\bin\EntityFramework.SqlServer.dll
+D:\Skribl\SkriblApi\SkriblApi\bin\jose-jwt.dll
+D:\Skribl\SkriblApi\SkriblApi\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Skribl\SkriblApi\SkriblApi\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Skribl\SkriblApi\SkriblApi\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Skribl\SkriblApi\SkriblApi\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Skribl\SkriblApi\SkriblApi\bin\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\Skribl\SkriblApi\SkriblApi\bin\Microsoft.Extensions.Configuration.dll
+D:\Skribl\SkriblApi\SkriblApi\bin\Microsoft.Extensions.Configuration.FileExtensions.dll
+D:\Skribl\SkriblApi\SkriblApi\bin\Microsoft.Extensions.Configuration.Json.dll
+D:\Skribl\SkriblApi\SkriblApi\bin\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\Skribl\SkriblApi\SkriblApi\bin\Microsoft.Extensions.DependencyInjection.dll
+D:\Skribl\SkriblApi\SkriblApi\bin\Microsoft.Extensions.FileProviders.Abstractions.dll
+D:\Skribl\SkriblApi\SkriblApi\bin\Microsoft.Extensions.FileProviders.Physical.dll
+D:\Skribl\SkriblApi\SkriblApi\bin\Microsoft.Extensions.FileSystemGlobbing.dll
+D:\Skribl\SkriblApi\SkriblApi\bin\Microsoft.Extensions.Logging.Abstractions.dll
+D:\Skribl\SkriblApi\SkriblApi\bin\Microsoft.Extensions.Logging.Console.dll
+D:\Skribl\SkriblApi\SkriblApi\bin\Microsoft.Extensions.Logging.dll
+D:\Skribl\SkriblApi\SkriblApi\bin\Microsoft.Extensions.Primitives.dll
+D:\Skribl\SkriblApi\SkriblApi\bin\Microsoft.Owin.dll
+D:\Skribl\SkriblApi\SkriblApi\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Skribl\SkriblApi\SkriblApi\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Skribl\SkriblApi\SkriblApi\bin\Microsoft.Owin.Security.dll
+D:\Skribl\SkriblApi\SkriblApi\bin\Microsoft.Owin.Security.Facebook.dll
+D:\Skribl\SkriblApi\SkriblApi\bin\Microsoft.Owin.Security.Google.dll
+D:\Skribl\SkriblApi\SkriblApi\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\Skribl\SkriblApi\SkriblApi\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Skribl\SkriblApi\SkriblApi\bin\Microsoft.Owin.Security.Twitter.dll
+D:\Skribl\SkriblApi\SkriblApi\bin\Microsoft.Web.Infrastructure.dll
+D:\Skribl\SkriblApi\SkriblApi\bin\Newtonsoft.Json.dll
+D:\Skribl\SkriblApi\SkriblApi\bin\Nexmo.Api.dll
+D:\Skribl\SkriblApi\SkriblApi\bin\Owin.dll
+D:\Skribl\SkriblApi\SkriblApi\bin\PushSharp.Amazon.dll
+D:\Skribl\SkriblApi\SkriblApi\bin\PushSharp.Apple.dll
+D:\Skribl\SkriblApi\SkriblApi\bin\PushSharp.Blackberry.dll
+D:\Skribl\SkriblApi\SkriblApi\bin\PushSharp.Core.dll
+D:\Skribl\SkriblApi\SkriblApi\bin\PushSharp.Firefox.dll
+D:\Skribl\SkriblApi\SkriblApi\bin\PushSharp.Google.dll
+D:\Skribl\SkriblApi\SkriblApi\bin\PushSharp.Windows.dll
+D:\Skribl\SkriblApi\SkriblApi\bin\Swashbuckle.Core.dll
+D:\Skribl\SkriblApi\SkriblApi\bin\System.Net.Http.Formatting.dll
+D:\Skribl\SkriblApi\SkriblApi\bin\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\Skribl\SkriblApi\SkriblApi\bin\System.Web.Helpers.dll
+D:\Skribl\SkriblApi\SkriblApi\bin\System.Web.Http.dll
+D:\Skribl\SkriblApi\SkriblApi\bin\System.Web.Http.Owin.dll
+D:\Skribl\SkriblApi\SkriblApi\bin\System.Web.Http.WebHost.dll
+D:\Skribl\SkriblApi\SkriblApi\bin\System.Web.Mvc.dll
+D:\Skribl\SkriblApi\SkriblApi\bin\System.Web.Optimization.dll
+D:\Skribl\SkriblApi\SkriblApi\bin\System.Web.Razor.dll
+D:\Skribl\SkriblApi\SkriblApi\bin\System.Web.WebPages.Deployment.dll
+D:\Skribl\SkriblApi\SkriblApi\bin\System.Web.WebPages.dll
+D:\Skribl\SkriblApi\SkriblApi\bin\System.Web.WebPages.Razor.dll
+D:\Skribl\SkriblApi\SkriblApi\bin\WebActivatorEx.dll
+D:\Skribl\SkriblApi\SkriblApi\bin\WebGrease.dll
+D:\Skribl\SkriblApi\SkriblApi\bin\DAL.pdb
+D:\Skribl\SkriblApi\SkriblApi\bin\AutoMapper.xml
+D:\Skribl\SkriblApi\SkriblApi\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Skribl\SkriblApi\SkriblApi\bin\Microsoft.Extensions.Configuration.xml
+D:\Skribl\SkriblApi\SkriblApi\bin\Microsoft.Extensions.Configuration.Abstractions.xml
+D:\Skribl\SkriblApi\SkriblApi\bin\Microsoft.Extensions.Configuration.FileExtensions.xml
+D:\Skribl\SkriblApi\SkriblApi\bin\Microsoft.Extensions.Configuration.Json.xml
+D:\Skribl\SkriblApi\SkriblApi\bin\Microsoft.Extensions.DependencyInjection.xml
+D:\Skribl\SkriblApi\SkriblApi\bin\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+D:\Skribl\SkriblApi\SkriblApi\bin\Microsoft.Extensions.FileProviders.Abstractions.xml
+D:\Skribl\SkriblApi\SkriblApi\bin\Microsoft.Extensions.FileProviders.Physical.xml
+D:\Skribl\SkriblApi\SkriblApi\bin\Microsoft.Extensions.FileSystemGlobbing.xml
+D:\Skribl\SkriblApi\SkriblApi\bin\Microsoft.Extensions.Logging.xml
+D:\Skribl\SkriblApi\SkriblApi\bin\Microsoft.Extensions.Logging.Abstractions.xml
+D:\Skribl\SkriblApi\SkriblApi\bin\Microsoft.Extensions.Logging.Console.xml
+D:\Skribl\SkriblApi\SkriblApi\bin\Microsoft.Extensions.Primitives.xml
+D:\Skribl\SkriblApi\SkriblApi\bin\Newtonsoft.Json.xml
+D:\Skribl\SkriblApi\SkriblApi\bin\System.Web.Mvc.xml
+D:\Skribl\SkriblApi\SkriblApi\bin\System.Net.Http.Formatting.xml
+D:\Skribl\SkriblApi\SkriblApi\bin\System.Web.Helpers.xml
+D:\Skribl\SkriblApi\SkriblApi\bin\System.Web.Http.xml
+D:\Skribl\SkriblApi\SkriblApi\bin\System.Web.Http.WebHost.xml
+D:\Skribl\SkriblApi\SkriblApi\bin\System.Web.Optimization.xml
+D:\Skribl\SkriblApi\SkriblApi\bin\System.Web.Razor.xml
+D:\Skribl\SkriblApi\SkriblApi\bin\System.Web.WebPages.xml
+D:\Skribl\SkriblApi\SkriblApi\bin\System.Web.WebPages.Deployment.xml
+D:\Skribl\SkriblApi\SkriblApi\bin\System.Web.WebPages.Razor.xml
+D:\Skribl\SkriblApi\SkriblApi\bin\Antlr3.Runtime.pdb
+D:\Skribl\SkriblApi\SkriblApi\bin\EntityFramework.xml
+D:\Skribl\SkriblApi\SkriblApi\bin\EntityFramework.SqlServer.xml
+D:\Skribl\SkriblApi\SkriblApi\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Skribl\SkriblApi\SkriblApi\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Skribl\SkriblApi\SkriblApi\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Skribl\SkriblApi\SkriblApi\bin\Microsoft.Owin.xml
+D:\Skribl\SkriblApi\SkriblApi\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Skribl\SkriblApi\SkriblApi\bin\Microsoft.Owin.Security.xml
+D:\Skribl\SkriblApi\SkriblApi\bin\Microsoft.Owin.Security.Facebook.xml
+D:\Skribl\SkriblApi\SkriblApi\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Skribl\SkriblApi\SkriblApi\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Skribl\SkriblApi\SkriblApi\bin\Microsoft.Owin.Security.Google.xml
+D:\Skribl\SkriblApi\SkriblApi\bin\Microsoft.Owin.Security.Twitter.xml
+D:\Skribl\SkriblApi\SkriblApi\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\Skribl\SkriblApi\SkriblApi\bin\System.Web.Http.Owin.xml
+D:\Skribl\SkriblApi\SkriblApi\obj\Debug\SkriblApi.csprojResolveAssemblyReference.cache
+D:\Skribl\SkriblApi\SkriblApi\obj\Debug\WebApplication1.dll
+D:\Skribl\SkriblApi\SkriblApi\obj\Debug\WebApplication1.pdb
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\roslyn\csc.exe
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\roslyn\Microsoft.CodeAnalysis.dll
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\roslyn\Microsoft.CSharp.Core.targets
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\roslyn\Microsoft.VisualBasic.Core.targets
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\roslyn\System.Collections.Immutable.dll
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\roslyn\System.Reflection.Metadata.dll
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\roslyn\vbc.exe
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\roslyn\VBCSCompiler.exe
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\roslyn\VBCSCompiler.exe.config
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\WebApplication1.dll.config
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\SkribleApiHelp.XML
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\WebApplication1.dll
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\WebApplication1.pdb
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\Antlr3.Runtime.dll
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\AutoMapper.dll
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\DAL.dll
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\EntityFramework.dll
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\EntityFramework.SqlServer.dll
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\jose-jwt.dll
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\Microsoft.AspNet.Identity.Core.dll
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\Microsoft.AspNet.Identity.Owin.dll
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\Microsoft.Extensions.Configuration.Abstractions.dll
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\Microsoft.Extensions.Configuration.dll
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\Microsoft.Extensions.Configuration.FileExtensions.dll
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\Microsoft.Extensions.Configuration.Json.dll
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\Microsoft.Extensions.DependencyInjection.dll
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\Microsoft.Extensions.FileProviders.Abstractions.dll
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\Microsoft.Extensions.FileProviders.Physical.dll
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\Microsoft.Extensions.FileSystemGlobbing.dll
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\Microsoft.Extensions.Logging.Abstractions.dll
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\Microsoft.Extensions.Logging.Console.dll
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\Microsoft.Extensions.Logging.dll
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\Microsoft.Extensions.Primitives.dll
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\Microsoft.Owin.dll
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\Microsoft.Owin.Host.SystemWeb.dll
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\Microsoft.Owin.Security.Cookies.dll
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\Microsoft.Owin.Security.dll
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\Microsoft.Owin.Security.Facebook.dll
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\Microsoft.Owin.Security.Google.dll
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\Microsoft.Owin.Security.OAuth.dll
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\Microsoft.Owin.Security.Twitter.dll
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\Microsoft.Web.Infrastructure.dll
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\Newtonsoft.Json.dll
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\Nexmo.Api.dll
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\Owin.dll
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\PushSharp.Amazon.dll
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\PushSharp.Apple.dll
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\PushSharp.Blackberry.dll
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\PushSharp.Core.dll
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\PushSharp.Firefox.dll
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\PushSharp.Google.dll
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\PushSharp.Windows.dll
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\Swashbuckle.Core.dll
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\System.Net.Http.Formatting.dll
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\System.Runtime.InteropServices.RuntimeInformation.dll
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\System.Web.Helpers.dll
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\System.Web.Http.dll
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\System.Web.Http.Owin.dll
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\System.Web.Http.WebHost.dll
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\System.Web.Mvc.dll
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\System.Web.Optimization.dll
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\System.Web.Razor.dll
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\System.Web.WebPages.Deployment.dll
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\System.Web.WebPages.dll
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\System.Web.WebPages.Razor.dll
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\WebActivatorEx.dll
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\WebGrease.dll
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\DAL.pdb
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\AutoMapper.xml
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\Microsoft.Extensions.Configuration.xml
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\Microsoft.Extensions.Configuration.Abstractions.xml
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\Microsoft.Extensions.Configuration.FileExtensions.xml
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\Microsoft.Extensions.Configuration.Json.xml
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\Microsoft.Extensions.DependencyInjection.xml
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\Microsoft.Extensions.FileProviders.Abstractions.xml
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\Microsoft.Extensions.FileProviders.Physical.xml
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\Microsoft.Extensions.FileSystemGlobbing.xml
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\Microsoft.Extensions.Logging.xml
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\Microsoft.Extensions.Logging.Abstractions.xml
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\Microsoft.Extensions.Logging.Console.xml
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\Microsoft.Extensions.Primitives.xml
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\Newtonsoft.Json.xml
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\System.Web.Mvc.xml
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\System.Net.Http.Formatting.xml
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\System.Web.Helpers.xml
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\System.Web.Http.xml
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\System.Web.Http.WebHost.xml
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\System.Web.Optimization.xml
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\System.Web.Razor.xml
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\System.Web.WebPages.xml
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\System.Web.WebPages.Deployment.xml
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\System.Web.WebPages.Razor.xml
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\Antlr3.Runtime.pdb
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\EntityFramework.xml
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\EntityFramework.SqlServer.xml
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\Microsoft.AspNet.Identity.Core.xml
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\Microsoft.AspNet.Identity.Owin.xml
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\Microsoft.Owin.xml
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\Microsoft.Owin.Host.SystemWeb.xml
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\Microsoft.Owin.Security.xml
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\Microsoft.Owin.Security.Facebook.xml
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\Microsoft.Owin.Security.Cookies.xml
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\Microsoft.Owin.Security.OAuth.xml
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\Microsoft.Owin.Security.Google.xml
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\Microsoft.Owin.Security.Twitter.xml
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\System.Web.Http.Owin.xml
+F:\VS\GitRepository\SkriblApi\SkriblApi\obj\Debug\SkriblApi.csprojResolveAssemblyReference.cache
+F:\VS\GitRepository\SkriblApi\SkriblApi\obj\Debug\WebApplication1.dll
+F:\VS\GitRepository\SkriblApi\SkriblApi\obj\Debug\WebApplication1.pdb
+F:\VS\GitRepository\SkriblApi\SkriblApi\obj\Debug\RdlCompile.cache
+F:\VS\GitRepository\SkriblApi\SkriblApi\obj\Debug\RdlCompile.compiled
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\Microsoft.ReportViewer.WinForms.dll
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\Microsoft.SqlServer.Types.dll
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\SqlServerTypes\x64\msvcr120.dll
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\SqlServerTypes\x64\SqlServerSpatial140.dll
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\SqlServerTypes\x86\msvcr120.dll
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\SqlServerTypes\x86\SqlServerSpatial140.dll
+F:\VS\GitRepository\SkriblApi\SkriblApi\bin\Z.EntityFramework.Plus.EF6.dll
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\SqlServerTypes\x64\msvcr120.dll
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\SqlServerTypes\x64\SqlServerSpatial140.dll
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\SqlServerTypes\x86\msvcr120.dll
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\SqlServerTypes\x86\SqlServerSpatial140.dll
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\roslyn\csc.exe
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\roslyn\System.Collections.Immutable.dll
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\roslyn\System.Reflection.Metadata.dll
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\roslyn\vbc.exe
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\roslyn\VBCSCompiler.exe
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\roslyn\VBCSCompiler.exe.config
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\WebApplication1.dll.config
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\SkribleApiHelp.XML
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\WebApplication1.dll
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\WebApplication1.pdb
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\Antlr3.Runtime.dll
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\AutoMapper.dll
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\DAL.dll
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\EntityFramework.dll
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\EntityFramework.SqlServer.dll
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\jose-jwt.dll
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\Microsoft.AspNet.Identity.Core.dll
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\Microsoft.Extensions.Configuration.Abstractions.dll
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\Microsoft.Extensions.Configuration.dll
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\Microsoft.Extensions.Configuration.FileExtensions.dll
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\Microsoft.Extensions.Configuration.Json.dll
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\Microsoft.Extensions.DependencyInjection.dll
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\Microsoft.Extensions.FileProviders.Abstractions.dll
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\Microsoft.Extensions.FileProviders.Physical.dll
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\Microsoft.Extensions.FileSystemGlobbing.dll
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\Microsoft.Extensions.Logging.Abstractions.dll
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\Microsoft.Extensions.Logging.Console.dll
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\Microsoft.Extensions.Logging.dll
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\Microsoft.Extensions.Primitives.dll
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\Microsoft.Owin.dll
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\Microsoft.Owin.Security.Cookies.dll
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\Microsoft.Owin.Security.dll
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\Microsoft.Owin.Security.Facebook.dll
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\Microsoft.Owin.Security.Google.dll
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\Microsoft.Owin.Security.OAuth.dll
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\Microsoft.Owin.Security.Twitter.dll
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\Microsoft.SqlServer.Types.dll
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\Microsoft.Web.Infrastructure.dll
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\Newtonsoft.Json.dll
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\Nexmo.Api.dll
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\Owin.dll
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\PushSharp.Amazon.dll
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\PushSharp.Apple.dll
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\PushSharp.Blackberry.dll
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\PushSharp.Core.dll
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\PushSharp.Firefox.dll
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\PushSharp.Google.dll
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\PushSharp.Windows.dll
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\Swashbuckle.Core.dll
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\System.Net.Http.Formatting.dll
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\System.Runtime.InteropServices.RuntimeInformation.dll
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\System.Web.Helpers.dll
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\System.Web.Http.dll
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\System.Web.Http.Owin.dll
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\System.Web.Http.WebHost.dll
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\System.Web.Mvc.dll
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\System.Web.Optimization.dll
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\System.Web.Razor.dll
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\System.Web.WebPages.Deployment.dll
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\System.Web.WebPages.dll
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\System.Web.WebPages.Razor.dll
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\WebActivatorEx.dll
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\WebGrease.dll
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\Z.EntityFramework.Plus.EF6.dll
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\DAL.pdb
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\DAL.dll.config
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\AutoMapper.xml
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\Microsoft.Extensions.Configuration.xml
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\Microsoft.Extensions.Configuration.Abstractions.xml
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\Microsoft.Extensions.Configuration.FileExtensions.xml
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\Microsoft.Extensions.Configuration.Json.xml
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\Microsoft.Extensions.DependencyInjection.xml
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\Microsoft.Extensions.FileProviders.Abstractions.xml
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\Microsoft.Extensions.FileProviders.Physical.xml
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\Microsoft.Extensions.FileSystemGlobbing.xml
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\Microsoft.Extensions.Logging.xml
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\Microsoft.Extensions.Logging.Abstractions.xml
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\Microsoft.Extensions.Logging.Console.xml
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\Microsoft.Extensions.Primitives.xml
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\Newtonsoft.Json.xml
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\System.Web.Mvc.xml
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\System.Net.Http.Formatting.xml
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\System.Web.Helpers.xml
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\System.Web.Http.xml
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\System.Web.Http.WebHost.xml
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\System.Web.Optimization.xml
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\System.Web.Razor.xml
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\System.Web.WebPages.xml
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\System.Web.WebPages.Deployment.xml
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\System.Web.WebPages.Razor.xml
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\Antlr3.Runtime.pdb
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\EntityFramework.xml
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\EntityFramework.SqlServer.xml
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\Microsoft.AspNet.Identity.Core.xml
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\Microsoft.Owin.xml
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\Microsoft.Owin.Security.xml
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\Microsoft.Owin.Security.Facebook.xml
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\Microsoft.Owin.Security.Cookies.xml
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\Microsoft.Owin.Security.OAuth.xml
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\Microsoft.Owin.Security.Google.xml
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\Microsoft.Owin.Security.Twitter.xml
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\bin\System.Web.Http.Owin.xml
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\obj\Debug\SkriblApi.csprojResolveAssemblyReference.cache
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\obj\Debug\WebApplication1.dll
+E:\Mehmood ul Hassan\SkriblBox\SkriblApi\SkriblApi\obj\Debug\WebApplication1.pdb
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\SqlServerTypes\x64\msvcr120.dll
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\SqlServerTypes\x64\SqlServerSpatial140.dll
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\SqlServerTypes\x86\msvcr120.dll
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\SqlServerTypes\x86\SqlServerSpatial140.dll
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\roslyn\csc.exe
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\roslyn\Microsoft.CodeAnalysis.dll
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\roslyn\Microsoft.CSharp.Core.targets
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\roslyn\Microsoft.VisualBasic.Core.targets
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\roslyn\System.Collections.Immutable.dll
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\roslyn\System.Reflection.Metadata.dll
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\roslyn\vbc.exe
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\roslyn\VBCSCompiler.exe
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\roslyn\VBCSCompiler.exe.config
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\WebApplication1.dll.config
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\SkribleApiHelp.XML
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\WebApplication1.dll
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\WebApplication1.pdb
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\Antlr3.Runtime.dll
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\AutoMapper.dll
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\DAL.dll
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\EntityFramework.dll
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\EntityFramework.SqlServer.dll
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\jose-jwt.dll
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\Microsoft.AspNet.Identity.Core.dll
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\Microsoft.AspNet.Identity.Owin.dll
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\Microsoft.Extensions.Configuration.Abstractions.dll
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\Microsoft.Extensions.Configuration.dll
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\Microsoft.Extensions.Configuration.FileExtensions.dll
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\Microsoft.Extensions.Configuration.Json.dll
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\Microsoft.Extensions.DependencyInjection.dll
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\Microsoft.Extensions.FileProviders.Abstractions.dll
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\Microsoft.Extensions.FileProviders.Physical.dll
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\Microsoft.Extensions.FileSystemGlobbing.dll
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\Microsoft.Extensions.Logging.Abstractions.dll
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\Microsoft.Extensions.Logging.Console.dll
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\Microsoft.Extensions.Logging.dll
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\Microsoft.Extensions.Primitives.dll
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\Microsoft.Owin.dll
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\Microsoft.Owin.Host.SystemWeb.dll
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\Microsoft.Owin.Security.Cookies.dll
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\Microsoft.Owin.Security.dll
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\Microsoft.Owin.Security.Facebook.dll
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\Microsoft.Owin.Security.Google.dll
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\Microsoft.Owin.Security.OAuth.dll
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\Microsoft.Owin.Security.Twitter.dll
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\Microsoft.SqlServer.Types.dll
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\Microsoft.Web.Infrastructure.dll
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\Newtonsoft.Json.dll
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\Nexmo.Api.dll
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\Owin.dll
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\PushSharp.Amazon.dll
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\PushSharp.Apple.dll
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\PushSharp.Blackberry.dll
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\PushSharp.Core.dll
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\PushSharp.Firefox.dll
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\PushSharp.Google.dll
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\PushSharp.Windows.dll
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\Swashbuckle.Core.dll
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\System.Net.Http.Formatting.dll
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\System.Runtime.InteropServices.RuntimeInformation.dll
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\System.Web.Helpers.dll
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\System.Web.Http.dll
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\System.Web.Http.Owin.dll
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\System.Web.Http.WebHost.dll
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\System.Web.Mvc.dll
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\System.Web.Optimization.dll
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\System.Web.Razor.dll
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\System.Web.WebPages.Deployment.dll
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\System.Web.WebPages.dll
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\System.Web.WebPages.Razor.dll
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\WebActivatorEx.dll
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\WebGrease.dll
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\Z.EntityFramework.Plus.EF6.dll
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\DAL.pdb
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\AutoMapper.xml
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\Microsoft.Extensions.Configuration.xml
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\Microsoft.Extensions.Configuration.Abstractions.xml
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\Microsoft.Extensions.Configuration.FileExtensions.xml
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\Microsoft.Extensions.Configuration.Json.xml
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\Microsoft.Extensions.DependencyInjection.xml
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\Microsoft.Extensions.FileProviders.Abstractions.xml
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\Microsoft.Extensions.FileProviders.Physical.xml
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\Microsoft.Extensions.FileSystemGlobbing.xml
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\Microsoft.Extensions.Logging.xml
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\Microsoft.Extensions.Logging.Abstractions.xml
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\Microsoft.Extensions.Logging.Console.xml
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\Microsoft.Extensions.Primitives.xml
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\Newtonsoft.Json.xml
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\System.Web.Mvc.xml
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\System.Net.Http.Formatting.xml
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\System.Web.Helpers.xml
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\System.Web.Http.xml
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\System.Web.Http.WebHost.xml
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\System.Web.Optimization.xml
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\System.Web.Razor.xml
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\System.Web.WebPages.xml
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\System.Web.WebPages.Deployment.xml
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\System.Web.WebPages.Razor.xml
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\Antlr3.Runtime.pdb
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\EntityFramework.xml
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\EntityFramework.SqlServer.xml
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\Microsoft.AspNet.Identity.Core.xml
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\Microsoft.AspNet.Identity.Owin.xml
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\Microsoft.Owin.xml
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\Microsoft.Owin.Host.SystemWeb.xml
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\Microsoft.Owin.Security.xml
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\Microsoft.Owin.Security.Facebook.xml
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\Microsoft.Owin.Security.Cookies.xml
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\Microsoft.Owin.Security.OAuth.xml
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\Microsoft.Owin.Security.Google.xml
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\Microsoft.Owin.Security.Twitter.xml
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+F:\Projects\Skribl\SkriblApi\SkriblApi\bin\System.Web.Http.Owin.xml
+F:\Projects\Skribl\SkriblApi\SkriblApi\obj\Debug\SkriblApi.csprojResolveAssemblyReference.cache
+F:\Projects\Skribl\SkriblApi\SkriblApi\obj\Debug\WebApplication1.dll
+F:\Projects\Skribl\SkriblApi\SkriblApi\obj\Debug\WebApplication1.pdb

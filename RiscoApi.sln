@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.9
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{08EB1FF4-DAC9-470B-8BA5-FC802B9A147C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RiscoApi", "RiscoApi\RiscoApi.csproj", "{6003CFA9-E9B8-4E83-A54C-8256CB47C333}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{08EB1FF4-DAC9-470B-8BA5-FC802B9A147C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08EB1FF4-DAC9-470B-8BA5-FC802B9A147C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08EB1FF4-DAC9-470B-8BA5-FC802B9A147C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08EB1FF4-DAC9-470B-8BA5-FC802B9A147C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6003CFA9-E9B8-4E83-A54C-8256CB47C333}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6003CFA9-E9B8-4E83-A54C-8256CB47C333}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6003CFA9-E9B8-4E83-A54C-8256CB47C333}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6003CFA9-E9B8-4E83-A54C-8256CB47C333}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
