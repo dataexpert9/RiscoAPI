@@ -1359,3 +1359,200 @@ StackTrace   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbCon
    at System.Data.Entity.Infrastructure.DbQuery`1.System.Linq.IQueryable.get_Provider()
    at System.Linq.Queryable.FirstOrDefault[TSource](IQueryable`1 source)
    at BasketApi.BasketSettings.LoadSettings() in C:\.net projects\RiscoApi3\RiscoApi\Utility\BasketSettings.cs:line 20
+DateTime : 6/28/2018 1:28:19 PM
+
+
+MessageCannot insert the value NULL into column 'ParentComment_Id', table 'Risco_Dev.dbo.Comments'; column does not allow nulls. UPDATE fails.
+The statement has been terminated.
+
+StackTrace   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.<NonQuery>b__0(DbCommand t, DbCommandInterceptionContext`1 c)
+   at System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext,TResult](TTarget target, Func`3 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+   at System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.NonQuery(DbCommand command, DbCommandInterceptionContext interceptionContext)
+   at System.Data.Entity.Internal.InterceptableDbCommand.ExecuteNonQuery()
+   at System.Data.Entity.Migrations.DbMigrator.ExecuteSql(MigrationStatement migrationStatement, DbConnection connection, DbTransaction transaction, DbInterceptionContext interceptionContext)
+   at System.Data.Entity.Migrations.DbMigrator.ExecuteStatementsInternal(IEnumerable`1 migrationStatements, DbConnection connection, DbTransaction transaction, DbInterceptionContext interceptionContext)
+   at System.Data.Entity.Migrations.DbMigrator.ExecuteStatementsWithinTransaction(IEnumerable`1 migrationStatements, DbTransaction transaction, DbInterceptionContext interceptionContext)
+   at System.Data.Entity.Migrations.DbMigrator.ExecuteStatementsWithinNewTransaction(IEnumerable`1 migrationStatements, DbConnection connection, DbInterceptionContext interceptionContext)
+   at System.Data.Entity.Migrations.DbMigrator.ExecuteStatementsInternal(IEnumerable`1 migrationStatements, DbConnection connection, DbInterceptionContext interceptionContext)
+   at System.Data.Entity.Migrations.DbMigrator.ExecuteStatementsInternal(IEnumerable`1 migrationStatements, DbConnection connection)
+   at System.Data.Entity.Migrations.DbMigrator.<>c__DisplayClass30.<ExecuteStatements>b__2e()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.<>c__DisplayClass1.<Execute>b__0()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute(Action operation)
+   at System.Data.Entity.Migrations.DbMigrator.ExecuteStatements(IEnumerable`1 migrationStatements, DbTransaction existingTransaction)
+   at System.Data.Entity.Migrations.DbMigrator.ExecuteStatements(IEnumerable`1 migrationStatements)
+   at System.Data.Entity.Migrations.DbMigrator.ExecuteOperations(String migrationId, VersionedModel targetModel, IEnumerable`1 operations, IEnumerable`1 systemOperations, Boolean downgrading, Boolean auto)
+   at System.Data.Entity.Migrations.DbMigrator.AutoMigrate(String migrationId, VersionedModel sourceModel, VersionedModel targetModel, Boolean downgrading)
+   at System.Data.Entity.Migrations.DbMigrator.Upgrade(IEnumerable`1 pendingMigrations, String targetMigrationId, String lastMigrationId)
+   at System.Data.Entity.Migrations.DbMigrator.UpdateInternal(String targetMigration)
+   at System.Data.Entity.Migrations.DbMigrator.<>c__DisplayClassc.<Update>b__b()
+   at System.Data.Entity.Migrations.DbMigrator.EnsureDatabaseExists(Action mustSucceedToKeepDatabase)
+   at System.Data.Entity.Migrations.DbMigrator.Update(String targetMigration)
+   at System.Data.Entity.MigrateDatabaseToLatestVersion`2.InitializeDatabase(TContext context)
+   at System.Data.Entity.Internal.InternalContext.<>c__DisplayClassf`1.<CreateInitializationAction>b__e()
+   at System.Data.Entity.Internal.InternalContext.PerformInitializationAction(Action action)
+   at System.Data.Entity.Internal.InternalContext.PerformDatabaseInitialization()
+   at System.Data.Entity.Internal.LazyInternalContext.<InitializeDatabase>b__4(InternalContext c)
+   at System.Data.Entity.Internal.RetryAction`1.PerformAction(TInput input)
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeDatabaseAction(Action`1 action)
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeDatabase()
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
+   at System.Data.Entity.Infrastructure.DbQuery`1.System.Linq.IQueryable.get_Provider()
+   at System.Linq.Queryable.FirstOrDefault[TSource](IQueryable`1 source)
+   at BasketApi.BasketSettings.LoadSettings() in F:\MyGitLab\RiscoApi3\RiscoApi\Utility\BasketSettings.cs:line 20
+DateTime : 6/28/2018 1:28:50 PM
+
+
+MessageCannot insert the value NULL into column 'ParentComment_Id', table 'Risco_Dev.dbo.Comments'; column does not allow nulls. UPDATE fails.
+The statement has been terminated.
+
+StackTrace   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.<NonQuery>b__0(DbCommand t, DbCommandInterceptionContext`1 c)
+   at System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext,TResult](TTarget target, Func`3 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+   at System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.NonQuery(DbCommand command, DbCommandInterceptionContext interceptionContext)
+   at System.Data.Entity.Internal.InterceptableDbCommand.ExecuteNonQuery()
+   at System.Data.Entity.Migrations.DbMigrator.ExecuteSql(MigrationStatement migrationStatement, DbConnection connection, DbTransaction transaction, DbInterceptionContext interceptionContext)
+   at System.Data.Entity.Migrations.DbMigrator.ExecuteStatementsInternal(IEnumerable`1 migrationStatements, DbConnection connection, DbTransaction transaction, DbInterceptionContext interceptionContext)
+   at System.Data.Entity.Migrations.DbMigrator.ExecuteStatementsWithinTransaction(IEnumerable`1 migrationStatements, DbTransaction transaction, DbInterceptionContext interceptionContext)
+   at System.Data.Entity.Migrations.DbMigrator.ExecuteStatementsWithinNewTransaction(IEnumerable`1 migrationStatements, DbConnection connection, DbInterceptionContext interceptionContext)
+   at System.Data.Entity.Migrations.DbMigrator.ExecuteStatementsInternal(IEnumerable`1 migrationStatements, DbConnection connection, DbInterceptionContext interceptionContext)
+   at System.Data.Entity.Migrations.DbMigrator.ExecuteStatementsInternal(IEnumerable`1 migrationStatements, DbConnection connection)
+   at System.Data.Entity.Migrations.DbMigrator.<>c__DisplayClass30.<ExecuteStatements>b__2e()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.<>c__DisplayClass1.<Execute>b__0()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute(Action operation)
+   at System.Data.Entity.Migrations.DbMigrator.ExecuteStatements(IEnumerable`1 migrationStatements, DbTransaction existingTransaction)
+   at System.Data.Entity.Migrations.DbMigrator.ExecuteStatements(IEnumerable`1 migrationStatements)
+   at System.Data.Entity.Migrations.DbMigrator.ExecuteOperations(String migrationId, VersionedModel targetModel, IEnumerable`1 operations, IEnumerable`1 systemOperations, Boolean downgrading, Boolean auto)
+   at System.Data.Entity.Migrations.DbMigrator.AutoMigrate(String migrationId, VersionedModel sourceModel, VersionedModel targetModel, Boolean downgrading)
+   at System.Data.Entity.Migrations.DbMigrator.Upgrade(IEnumerable`1 pendingMigrations, String targetMigrationId, String lastMigrationId)
+   at System.Data.Entity.Migrations.DbMigrator.UpdateInternal(String targetMigration)
+   at System.Data.Entity.Migrations.DbMigrator.<>c__DisplayClassc.<Update>b__b()
+   at System.Data.Entity.Migrations.DbMigrator.EnsureDatabaseExists(Action mustSucceedToKeepDatabase)
+   at System.Data.Entity.Migrations.DbMigrator.Update(String targetMigration)
+   at System.Data.Entity.MigrateDatabaseToLatestVersion`2.InitializeDatabase(TContext context)
+   at System.Data.Entity.Internal.InternalContext.<>c__DisplayClassf`1.<CreateInitializationAction>b__e()
+   at System.Data.Entity.Internal.InternalContext.PerformInitializationAction(Action action)
+   at System.Data.Entity.Internal.InternalContext.PerformDatabaseInitialization()
+   at System.Data.Entity.Internal.LazyInternalContext.<InitializeDatabase>b__4(InternalContext c)
+   at System.Data.Entity.Internal.RetryAction`1.PerformAction(TInput input)
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeDatabaseAction(Action`1 action)
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeDatabase()
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Include(String path)
+   at System.Data.Entity.Infrastructure.DbQuery`1.Include(String path)
+   at System.Data.Entity.QueryableExtensions.Include[T](IQueryable`1 source, String path)
+   at System.Data.Entity.QueryableExtensions.Include[T,TProperty](IQueryable`1 source, Expression`1 path)
+   at BasketApi.Controllers.UserController.<Login>d__2.MoveNext() in F:\MyGitLab\RiscoApi3\RiscoApi\Controllers\UserController.cs:line 73
+DateTime : 6/28/2018 1:31:11 PM
+
+
+MessageCannot insert the value NULL into column 'ParentComment_Id', table 'Risco_Dev.dbo.Comments'; column does not allow nulls. UPDATE fails.
+The statement has been terminated.
+
+StackTrace   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.<NonQuery>b__0(DbCommand t, DbCommandInterceptionContext`1 c)
+   at System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext,TResult](TTarget target, Func`3 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+   at System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.NonQuery(DbCommand command, DbCommandInterceptionContext interceptionContext)
+   at System.Data.Entity.Internal.InterceptableDbCommand.ExecuteNonQuery()
+   at System.Data.Entity.Migrations.DbMigrator.ExecuteSql(MigrationStatement migrationStatement, DbConnection connection, DbTransaction transaction, DbInterceptionContext interceptionContext)
+   at System.Data.Entity.Migrations.DbMigrator.ExecuteStatementsInternal(IEnumerable`1 migrationStatements, DbConnection connection, DbTransaction transaction, DbInterceptionContext interceptionContext)
+   at System.Data.Entity.Migrations.DbMigrator.ExecuteStatementsWithinTransaction(IEnumerable`1 migrationStatements, DbTransaction transaction, DbInterceptionContext interceptionContext)
+   at System.Data.Entity.Migrations.DbMigrator.ExecuteStatementsWithinNewTransaction(IEnumerable`1 migrationStatements, DbConnection connection, DbInterceptionContext interceptionContext)
+   at System.Data.Entity.Migrations.DbMigrator.ExecuteStatementsInternal(IEnumerable`1 migrationStatements, DbConnection connection, DbInterceptionContext interceptionContext)
+   at System.Data.Entity.Migrations.DbMigrator.ExecuteStatementsInternal(IEnumerable`1 migrationStatements, DbConnection connection)
+   at System.Data.Entity.Migrations.DbMigrator.<>c__DisplayClass30.<ExecuteStatements>b__2e()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.<>c__DisplayClass1.<Execute>b__0()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute(Action operation)
+   at System.Data.Entity.Migrations.DbMigrator.ExecuteStatements(IEnumerable`1 migrationStatements, DbTransaction existingTransaction)
+   at System.Data.Entity.Migrations.DbMigrator.ExecuteStatements(IEnumerable`1 migrationStatements)
+   at System.Data.Entity.Migrations.DbMigrator.ExecuteOperations(String migrationId, VersionedModel targetModel, IEnumerable`1 operations, IEnumerable`1 systemOperations, Boolean downgrading, Boolean auto)
+   at System.Data.Entity.Migrations.DbMigrator.AutoMigrate(String migrationId, VersionedModel sourceModel, VersionedModel targetModel, Boolean downgrading)
+   at System.Data.Entity.Migrations.DbMigrator.Upgrade(IEnumerable`1 pendingMigrations, String targetMigrationId, String lastMigrationId)
+   at System.Data.Entity.Migrations.DbMigrator.UpdateInternal(String targetMigration)
+   at System.Data.Entity.Migrations.DbMigrator.<>c__DisplayClassc.<Update>b__b()
+   at System.Data.Entity.Migrations.DbMigrator.EnsureDatabaseExists(Action mustSucceedToKeepDatabase)
+   at System.Data.Entity.Migrations.DbMigrator.Update(String targetMigration)
+   at System.Data.Entity.MigrateDatabaseToLatestVersion`2.InitializeDatabase(TContext context)
+   at System.Data.Entity.Internal.InternalContext.<>c__DisplayClassf`1.<CreateInitializationAction>b__e()
+   at System.Data.Entity.Internal.InternalContext.PerformInitializationAction(Action action)
+   at System.Data.Entity.Internal.InternalContext.PerformDatabaseInitialization()
+   at System.Data.Entity.Internal.LazyInternalContext.<InitializeDatabase>b__4(InternalContext c)
+   at System.Data.Entity.Internal.RetryAction`1.PerformAction(TInput input)
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeDatabaseAction(Action`1 action)
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeDatabase()
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Include(String path)
+   at System.Data.Entity.Infrastructure.DbQuery`1.Include(String path)
+   at System.Data.Entity.QueryableExtensions.Include[T](IQueryable`1 source, String path)
+   at System.Data.Entity.QueryableExtensions.Include[T,TProperty](IQueryable`1 source, Expression`1 path)
+   at BasketApi.Controllers.UserController.<Login>d__2.MoveNext() in F:\MyGitLab\RiscoApi3\RiscoApi\Controllers\UserController.cs:line 73
+DateTime : 6/28/2018 1:44:30 PM
+
+
+MessageAn error occurred while updating the entries. See the inner exception for details.
+
+StackTrace   at System.Data.Entity.Internal.InternalContext.SaveChanges()
+   at System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   at System.Data.Entity.DbContext.SaveChanges()
+   at BasketApi.Areas.SubAdmin.Controllers.PostController.<LikePost>d__4.MoveNext() in F:\MyGitLab\RiscoApi3\RiscoApi\Areas\Admin\Controllers\PostController.cs:line 273
+
+Inner Exception : An error occurred while updating the entries. See the inner exception for details.
+
+Inner Exception : Cannot insert the value NULL into column 'Comment_Id', table 'Risco_Dev.dbo.Likes'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+------******------
+DateTime : 6/28/2018 1:56:56 PM
+
+
+MessageAn error occurred while updating the entries. See the inner exception for details.
+
+StackTrace   at System.Data.Entity.Internal.InternalContext.SaveChanges()
+   at System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   at System.Data.Entity.DbContext.SaveChanges()
+   at BasketApi.Areas.SubAdmin.Controllers.PostController.<LikeComment>d__5.MoveNext() in F:\MyGitLab\RiscoApi3\RiscoApi\Areas\Admin\Controllers\PostController.cs:line 308
+
+Inner Exception : An error occurred while updating the entries. See the inner exception for details.
+
+Inner Exception : The INSERT statement conflicted with the FOREIGN KEY constraint "FK_dbo.Likes_dbo.Comments_Comment_Id". The conflict occurred in database "Risco_Dev", table "dbo.Comments", column 'Id'.
+The statement has been terminated.
+------******------
+DateTime : 6/28/2018 1:58:18 PM
+
+
+MessageAn error occurred while updating the entries. See the inner exception for details.
+
+StackTrace   at System.Data.Entity.Internal.InternalContext.SaveChanges()
+   at System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   at System.Data.Entity.DbContext.SaveChanges()
+   at BasketApi.Areas.SubAdmin.Controllers.PostController.<LikeComment>d__5.MoveNext() in F:\MyGitLab\RiscoApi3\RiscoApi\Areas\Admin\Controllers\PostController.cs:line 308
+
+Inner Exception : An error occurred while updating the entries. See the inner exception for details.
+
+Inner Exception : The INSERT statement conflicted with the FOREIGN KEY constraint "FK_dbo.Likes_dbo.Comments_Comment_Id". The conflict occurred in database "Risco_Dev", table "dbo.Comments", column 'Id'.
+The statement has been terminated.
+------******------

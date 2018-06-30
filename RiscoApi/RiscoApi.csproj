@@ -357,9 +357,10 @@
     <Compile Include="BindingModels\AddHowItWorksBindingModel.cs" />
     <Compile Include="BindingModels\ChangeOrderStatusBindingModel.cs" />
     <Compile Include="BindingModels\ContentBindingModel.cs" />
+    <Compile Include="BindingModels\CreateCommentBindingModel.cs" />
     <Compile Include="BindingModels\NotificationBindingModel.cs" />
     <Compile Include="BindingModels\AccountSettingsBindingModel.cs" />
-    <Compile Include="BindingModels\PostBindingModel.cs" />
+    <Compile Include="BindingModels\CreatePostBindingModel.cs" />
     <Compile Include="BindingModels\PrivacySettingsBindingModel.cs" />
     <Compile Include="BindingModels\NotificationSettingsBindingModel.cs" />
     <Compile Include="BindingModels\PackageBindingModel.cs" />

@@ -26,5 +26,7 @@ namespace DAL
         //public virtual User User { get; set; }
 
         public bool IsDeleted { get; set; }
+
+        public DateTime CreatedDate { get; set; }
     }
 }

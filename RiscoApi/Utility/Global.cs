@@ -135,7 +135,7 @@ namespace BasketApi
         public enum PostVisibilityTypes
         {
             Public = 1,
-            Private = 2,
+            Follower = 2,
             OnlyMe = 3
         }
 

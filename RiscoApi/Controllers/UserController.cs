@@ -77,6 +77,12 @@ namespace BasketApi.Controllers
 						await userModel.GenerateToken(Request);
 						BasketSettings.LoadSettings();
 						userModel.BasketSettings = BasketSettings.Settings;
+						if (!String.IsNullOrEmpty(userModel.Interests))
+						{
+							var lstUserIntrests = userModel.Interests.Split(',').Select(int.Parse).ToList();
+							foreach (var intrest in userModel.BasketSettings.Interests)
+								intrest.Checked = lstUserIntrests.Contains(intrest.Id);
+						}
 						return Ok(new CustomResponse<User> { Message = Global.ResponseMessages.Success, StatusCode = (int)HttpStatusCode.OK, Result = userModel });
 					}
 
@@ -685,7 +691,7 @@ namespace BasketApi.Controllers
 				{
 					return BadRequest(ModelState);
 				}
-                
+				
 
 				using (RiscoContext ctx = new RiscoContext())
 				{
@@ -693,11 +699,11 @@ namespace BasketApi.Controllers
 					{
 						var hashedPassword = CryptoHelper.Hash(model.OldPassword);
 						var hashedNewPassword = CryptoHelper.Hash(model.NewPassword);
-                        var user = ctx.Users.FirstOrDefault(x => x.Email == userEmail && x.Password == hashedPassword);
-                        if (hashedPassword == hashedNewPassword)
-                        {
-                            return Ok(new CustomResponse<Error> { Message = "Forbidden", StatusCode = (int)HttpStatusCode.Forbidden, Result = new Error { ErrorMessage = "New password shouldn't be same as the old password" } });
-                        }
+						var user = ctx.Users.FirstOrDefault(x => x.Email == userEmail && x.Password == hashedPassword);
+						if (hashedPassword == hashedNewPassword)
+						{
+							return Ok(new CustomResponse<Error> { Message = "Forbidden", StatusCode = (int)HttpStatusCode.Forbidden, Result = new Error { ErrorMessage = "New password shouldn't be same as the old password" } });
+						}
 						if (user != null)
 						{
 							user.Password = CryptoHelper.Hash(model.NewPassword);
@@ -1545,26 +1551,26 @@ namespace BasketApi.Controllers
 		{
 			try
 			{
-                using (RiscoContext ctx = new RiscoContext())
-                {
-                    var userModel = ctx.Users.Include(x => x.UserAddresses).Include(x => x.PaymentCards).FirstOrDefault(x => x.Id == UserId && x.IsDeleted == false);
+				using (RiscoContext ctx = new RiscoContext())
+				{
+					var userModel = ctx.Users.Include(x => x.UserAddresses).Include(x => x.PaymentCards).FirstOrDefault(x => x.Id == UserId && x.IsDeleted == false);
 
-                    if (userModel != null)
-                    {
-                        BasketSettings.LoadSettings();
-                        await userModel.GenerateToken(Request);
-                        userModel.BasketSettings = BasketSettings.Settings;
-                        if (!String.IsNullOrEmpty(userModel.Interests))
-                        {
-                            var lstUserIntrests = userModel.Interests.Split(',').Select(int.Parse).ToList();
-                            foreach (var intrest in userModel.BasketSettings.Interests)
-                                intrest.Checked = lstUserIntrests.Contains(intrest.Id);
-                        }
-                        return Ok(new CustomResponse<User> { Message = Global.ResponseMessages.Success, StatusCode = (int)HttpStatusCode.OK, Result = userModel });
-                    }
-                    else
-                        return Ok(new CustomResponse<Error> { Message = Global.ResponseMessages.Success, StatusCode = (int)HttpStatusCode.OK, Result = new Error { ErrorMessage = "Invalid UserId" } });
-                }
+					if (userModel != null)
+					{
+						BasketSettings.LoadSettings();
+						await userModel.GenerateToken(Request);
+						userModel.BasketSettings = BasketSettings.Settings;
+						if (!String.IsNullOrEmpty(userModel.Interests))
+						{
+							var lstUserIntrests = userModel.Interests.Split(',').Select(int.Parse).ToList();
+							foreach (var intrest in userModel.BasketSettings.Interests)
+								intrest.Checked = lstUserIntrests.Contains(intrest.Id);
+						}
+						return Ok(new CustomResponse<User> { Message = Global.ResponseMessages.Success, StatusCode = (int)HttpStatusCode.OK, Result = userModel });
+					}
+					else
+						return Ok(new CustomResponse<Error> { Message = Global.ResponseMessages.Success, StatusCode = (int)HttpStatusCode.OK, Result = new Error { ErrorMessage = "Invalid UserId" } });
+				}
 			}
 			catch (Exception ex)
 			{
@@ -1764,12 +1770,19 @@ http://www.skriblbox.com
 
 					UserResult.IsPostLocation = model.IsPostLocation;
 					UserResult.TaggingPrivacy = model.TaggingPrivacy;
-                    UserResult.FindByEmail = model.FindByEmail;
-                    UserResult.FindByPhone = model.FindByPhone;
-                    UserResult.MessagePrivacy = model.MessagePrivacy;
-                    ctx.SaveChanges();
+					UserResult.FindByEmail = model.FindByEmail;
+					UserResult.FindByPhone = model.FindByPhone;
+					UserResult.MessagePrivacy = model.MessagePrivacy;
+					ctx.SaveChanges();
 
-					return Ok();
+					CustomResponse<User> response = new CustomResponse<User>
+					{
+						Message = Global.ResponseMessages.Success,
+						StatusCode = (int)HttpStatusCode.OK,
+						Result = UserResult
+					};
+
+					return Ok(response);
 				}
 			}
 			catch (Exception ex)
@@ -1800,7 +1813,14 @@ http://www.skriblbox.com
 
 					ctx.SaveChanges();
 
-					return Ok();
+					CustomResponse<User> response = new CustomResponse<User>
+					{
+						Message = Global.ResponseMessages.Success,
+						StatusCode = (int)HttpStatusCode.OK,
+						Result = UserResult
+					};
+
+					return Ok(response);
 				}
 			}
 			catch (Exception ex)

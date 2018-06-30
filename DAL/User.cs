@@ -28,6 +28,10 @@ namespace DAL
             Feedback = new HashSet<ContactUs>();
             VerifyNumberCodes = new HashSet<VerifyNumberCodes>();
             Posts = new HashSet<Post>();
+            UserGroups = new HashSet<UserGroup>();
+            Likes = new HashSet<Like>();
+            Comments = new HashSet<Comment>();
+            Shares = new HashSet<Share>();
         }
 
         public int Id { get; set; }
@@ -109,7 +113,25 @@ namespace DAL
         public virtual ICollection<VerifyNumberCodes> VerifyNumberCodes { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+
+        [JsonIgnore]
         public virtual ICollection<Post> Posts { get; set; }
+
+        [JsonIgnore]
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<UserGroup> UserGroups { get; set; }
+
+        [JsonIgnore]
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Like> Likes { get; set; }
+
+        [JsonIgnore]
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Comment> Comments { get; set; }
+
+        [JsonIgnore]
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Share> Shares { get; set; }
 
         public bool IsNotificationsOn { get; set; }
 

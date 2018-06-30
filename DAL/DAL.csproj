@@ -105,8 +105,12 @@
     <Compile Include="AppRatings.cs" />
     <Compile Include="Banner_Images.cs" />
     <Compile Include="Box.cs" />
+    <Compile Include="Comment.cs" />
+    <Compile Include="Share.cs" />
     <Compile Include="Media.cs" />
     <Compile Include="Interest.cs" />
+    <Compile Include="Like.cs" />
+    <Compile Include="UserGroup.cs" />
     <Compile Include="Product_Images.cs" />
     <Compile Include="RiscoContext.cs" />
     <Compile Include="Category.cs" />

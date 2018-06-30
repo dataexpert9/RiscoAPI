@@ -58,12 +58,13 @@ namespace DAL
         public virtual DbSet<Banner_Images> BannerImages { get; set; }
         public virtual DbSet<AdminTokens> AdminTokens { get; set; }        
         public virtual DbSet<VerifyNumberCodes> VerifyNumberCodes { get; set; }
-
         public virtual DbSet<Post> Posts{ get; set; }
-
         public virtual DbSet<Media> Medias { get; set; }
-
         public virtual DbSet<Interest> Interests { get; set; }
+        public virtual DbSet<UserGroup> UserGroups { get; set; }
+        public virtual DbSet<Like> Likes { get; set; }
+        public virtual DbSet<Comment> Comments { get; set; }
+        public virtual DbSet<Share> Shares { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -463,10 +464,64 @@ namespace DAL
                 .HasForeignKey(e => e.User_Id)
                 .WillCascadeOnDelete(false);
 
+            modelBuilder.Entity<User>()
+                .HasMany(e => e.UserGroups)
+                .WithRequired(e => e.User)
+                .HasForeignKey(e => e.User_Id)
+                .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<User>()
+                .HasMany(e => e.Likes)
+                .WithRequired(e => e.User)
+                .HasForeignKey(e => e.User_Id)
+                .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<User>()
+                .HasMany(e => e.Comments)
+                .WithRequired(e => e.User)
+                .HasForeignKey(e => e.User_Id)
+                .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<User>()
+                .HasMany(e => e.Shares)
+                .WithRequired(e => e.User)
+                .HasForeignKey(e => e.User_Id)
+                .WillCascadeOnDelete(false);
+
             modelBuilder.Entity<Post>()
                 .HasMany(e => e.Medias)
                 .WithRequired(e => e.Post)
                 .HasForeignKey(e => e.Post_Id)
+                .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<Post>()
+                .HasMany(e => e.Likes)
+                .WithOptional(e => e.Post)
+                .HasForeignKey(e => e.Post_Id)
+                .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<Post>()
+                .HasMany(e => e.Comments)
+                .WithRequired(e => e.Post)
+                .HasForeignKey(e => e.Post_Id)
+                .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<Post>()
+                .HasMany(e => e.Shares)
+                .WithRequired(e => e.Post)
+                .HasForeignKey(e => e.Post_Id)
+                .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<Comment>()
+                .HasMany(e => e.Likes)
+                .WithOptional(e => e.Comment)
+                .HasForeignKey(e => e.Comment_Id)
+                .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<UserGroup>()
+                .HasMany(e => e.Posts)
+                .WithOptional(e => e.UserGroup)
+                .HasForeignKey(e => e.UserGroup_Id)
                 .WillCascadeOnDelete(false);
         }
     }

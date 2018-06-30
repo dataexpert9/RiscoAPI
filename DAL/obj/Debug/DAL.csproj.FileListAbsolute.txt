@@ -243,3 +243,40 @@ C:\.net projects\RiscoApi3\DAL\obj\Debug\DAL.Migrations.asd5.resources
 C:\.net projects\RiscoApi3\DAL\obj\Debug\DAL.csproj.GenerateResource.Cache
 C:\.net projects\RiscoApi3\DAL\obj\Debug\DAL.dll
 C:\.net projects\RiscoApi3\DAL\obj\Debug\DAL.pdb
+F:\MyGitLab\RiscoApi3\DAL\bin\Debug\DAL.dll.config
+F:\MyGitLab\RiscoApi3\DAL\bin\Debug\DAL.dll
+F:\MyGitLab\RiscoApi3\DAL\bin\Debug\DAL.pdb
+F:\MyGitLab\RiscoApi3\DAL\bin\Debug\EntityFramework.dll
+F:\MyGitLab\RiscoApi3\DAL\bin\Debug\EntityFramework.SqlServer.dll
+F:\MyGitLab\RiscoApi3\DAL\bin\Debug\Newtonsoft.Json.dll
+F:\MyGitLab\RiscoApi3\DAL\bin\Debug\PushSharp.Amazon.dll
+F:\MyGitLab\RiscoApi3\DAL\bin\Debug\PushSharp.Apple.dll
+F:\MyGitLab\RiscoApi3\DAL\bin\Debug\PushSharp.Blackberry.dll
+F:\MyGitLab\RiscoApi3\DAL\bin\Debug\PushSharp.Core.dll
+F:\MyGitLab\RiscoApi3\DAL\bin\Debug\PushSharp.Firefox.dll
+F:\MyGitLab\RiscoApi3\DAL\bin\Debug\PushSharp.Google.dll
+F:\MyGitLab\RiscoApi3\DAL\bin\Debug\PushSharp.Windows.dll
+F:\MyGitLab\RiscoApi3\DAL\bin\Debug\System.Net.Http.Formatting.dll
+F:\MyGitLab\RiscoApi3\DAL\bin\Debug\System.Web.Cors.dll
+F:\MyGitLab\RiscoApi3\DAL\bin\Debug\System.Web.Http.Cors.dll
+F:\MyGitLab\RiscoApi3\DAL\bin\Debug\System.Web.Http.dll
+F:\MyGitLab\RiscoApi3\DAL\bin\Debug\Z.EntityFramework.Plus.EF6.dll
+F:\MyGitLab\RiscoApi3\DAL\bin\Debug\EntityFramework.xml
+F:\MyGitLab\RiscoApi3\DAL\bin\Debug\EntityFramework.SqlServer.xml
+F:\MyGitLab\RiscoApi3\DAL\bin\Debug\Newtonsoft.Json.xml
+F:\MyGitLab\RiscoApi3\DAL\bin\Debug\System.Net.Http.Formatting.xml
+F:\MyGitLab\RiscoApi3\DAL\bin\Debug\System.Web.Http.xml
+F:\MyGitLab\RiscoApi3\DAL\bin\Debug\System.Web.Http.Cors.xml
+F:\MyGitLab\RiscoApi3\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+F:\MyGitLab\RiscoApi3\DAL\obj\Debug\DAL.Migrations.asd.resources
+F:\MyGitLab\RiscoApi3\DAL\obj\Debug\DAL.Migrations.asdasd.resources
+F:\MyGitLab\RiscoApi3\DAL\obj\Debug\DAL.Migrations.asd1.resources
+F:\MyGitLab\RiscoApi3\DAL\obj\Debug\DAL.Migrations.asd2.resources
+F:\MyGitLab\RiscoApi3\DAL\obj\Debug\DAL.Migrations.asd3.resources
+F:\MyGitLab\RiscoApi3\DAL\obj\Debug\DAL.Migrations.asd4.resources
+F:\MyGitLab\RiscoApi3\DAL\obj\Debug\DAL.Migrations.asd5.resources
+F:\MyGitLab\RiscoApi3\DAL\obj\Debug\DAL.csproj.GenerateResource.cache
+F:\MyGitLab\RiscoApi3\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+F:\MyGitLab\RiscoApi3\DAL\obj\Debug\DAL.csproj.CopyComplete
+F:\MyGitLab\RiscoApi3\DAL\obj\Debug\DAL.dll
+F:\MyGitLab\RiscoApi3\DAL\obj\Debug\DAL.pdb
