@@ -471,25 +471,35 @@ namespace BasketApi.Controllers
 							Result = new Error { ErrorMessage = "User with entered email already exists." }
 						});
 					}
-					else
+					else if (ctx.Users.Any(x => x.Phone == model.PhoneNumber && x.IsDeleted == false))
+                    {
+                        return Content(HttpStatusCode.OK, new CustomResponse<Error>
+                        {
+                            Message = "Conflict",
+                            StatusCode = (int)HttpStatusCode.Conflict,
+                            Result = new Error { ErrorMessage = "User with entered phone number already exists." }
+                        });
+                    }
+                    else
 					{
-						if (ctx.Users.Any(x => x.Phone == model.PhoneNumber && x.IsDeleted == false))
-						{
-							return Content(HttpStatusCode.OK, new CustomResponse<Error>
-							{
-								Message = "Conflict",
-								StatusCode = (int)HttpStatusCode.Conflict,
-								Result = new Error { ErrorMessage = "User with entered phone number already exists." }
-							});
-						}
-					}
+                        if (ctx.Users.Any(x => x.UserName == model.UserName && x.IsDeleted == false))
+                        {
+                            return Content(HttpStatusCode.OK, new CustomResponse<Error>
+                            {
+                                Message = "Conflict",
+                                StatusCode = (int)HttpStatusCode.Conflict,
+                                Result = new Error { ErrorMessage = "User Name already exists." }
+                            });
+                        }
+                    }
 
 
-					User userModel = new User
+                    User userModel = new User
 					{
 						//FirstName = model.FirstName,
 						//LastName = model.LastName,
 						FullName = model.FullName,
+                        UserName = model.UserName,
 						Email = String.IsNullOrEmpty(model.Email) ? null : model.Email,
 						Phone = String.IsNullOrEmpty(model.PhoneNumber) ? null : model.PhoneNumber,
 						Password = CryptoHelper.Hash(model.Password),

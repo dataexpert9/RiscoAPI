@@ -14,6 +14,7 @@ namespace DAL
         {
             Likes = new HashSet<Like>();
             ChildComments = new List<Comment>();
+            //TrendLogs = new List<TrendLog>();
         }
 
         public int Id { get; set; }
@@ -34,8 +35,13 @@ namespace DAL
 
         public bool IsDeleted { get; set; }
 
+        [JsonIgnore]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Like> Likes { get; set; }
+
+        //[JsonIgnore]
+        //[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        //public virtual ICollection<TrendLog> TrendLogs { get; set; }
 
         [NotMapped]
         public List<Comment> ChildComments { get; set; }

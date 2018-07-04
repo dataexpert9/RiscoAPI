@@ -14,6 +14,7 @@ using System.Net.Http;
 using System.IO;
 using System.Configuration;
 using static BasketApi.Global;
+using System.Text.RegularExpressions;
 
 namespace BasketApi.Areas.SubAdmin.Controllers
 {
@@ -151,7 +152,9 @@ namespace BasketApi.Areas.SubAdmin.Controllers
                     ctx.Posts.Add(post);
                     ctx.SaveChanges();
 
-                    if(!string.IsNullOrEmpty(model.ImageUrls))
+                    SetTrends(Text: post.Text, User_Id: userId, Post_Id: post.Id);
+
+                    if (!string.IsNullOrEmpty(model.ImageUrls))
                     {
                         var ImageUrls = model.ImageUrls.Split(',');
                         foreach (var ImageUrl in ImageUrls)
@@ -192,7 +195,7 @@ namespace BasketApi.Areas.SubAdmin.Controllers
                         Result = post
                     };
                     return Ok(response);
-                }                                  
+                }
             }
             catch (Exception ex)
             {
@@ -202,7 +205,7 @@ namespace BasketApi.Areas.SubAdmin.Controllers
 
         [HttpGet]
         [Route("GetPosts")]
-        public async Task<IHttpActionResult> GetPosts()
+        public async Task<IHttpActionResult> GetPosts(int PageSize = int.MaxValue, int PageNo = 0)
         {
             try
             {
@@ -212,24 +215,40 @@ namespace BasketApi.Areas.SubAdmin.Controllers
 
                     List<Post> posts = new List<Post>();
 
+                    // Hide All Post Users
+
+                    var HideAllUsersIds = ctx.HideAllPosts.Where(x => x.FirstUserAll_Id == userId && x.IsDeleted == false).Select(x => x.SecondUserAll_Id).ToList();
+
+                    var HidePostsIds = ctx.HidePosts.Where(x => x.FirstUser_Id == userId && x.IsDeleted == false).Select(x => x.Post_Id).ToList();
+
                     posts = ctx.Posts
                         .Include(x => x.User)
                         .Include(x => x.Medias)
-                        .Where(x => x.IsDeleted == false).ToList();
+                        .Where(x => x.IsDeleted == false && x.User_Id != userId && !HideAllUsersIds.Contains(x.User_Id) && !HidePostsIds.Contains(x.Id))
+                        .OrderByDescending(x=> x.Id)
+                        .ToList();
+
+                    int PostCount = posts.Count();
+                    posts = posts.Skip(PageNo * PageSize).Take(PageSize).ToList();
 
                     foreach (Post post in posts)
                     {
-                        post.IsLiked = ctx.Likes.Any(x => x.Post_Id == post.Id && x.User_Id == userId);
-                        post.LikesCount = ctx.Posts.Sum(p => p.Likes.Where(x =>x.Post_Id == post.Id).Count());
-                        post.CommentsCount = ctx.Posts.Sum(p => p.Comments.Where(x => x.Post_Id == post.Id).Count());
-                        post.ShareCount = ctx.Posts.Sum(p => p.Shares.Where(x => x.Post_Id == post.Id).Count());
+                        post.IsLiked = ctx.Likes.Any(x => x.Post_Id == post.Id && x.User_Id == userId && x.IsDeleted == false);
+                        post.LikesCount = ctx.Posts.Sum(p => p.Likes.Where(x => x.Post_Id == post.Id && x.IsDeleted == false).Count());
+                        post.CommentsCount = ctx.Posts.Sum(p => p.Comments.Where(x => x.Post_Id == post.Id && x.IsDeleted == false).Count());
+                        post.ShareCount = ctx.Posts.Sum(p => p.Shares.Where(x => x.Post_Id == post.Id && x.IsDeleted == false).Count());
+                        post.IsUserFollow = ctx.FollowFollowers.Any(x => x.FirstUser_Id == userId && x.SecondUser_Id == post.User_Id && x.IsDeleted == false);
                     }
 
-                    CustomResponse<List<Post>> response = new CustomResponse<List<Post>>
+                    CustomResponse<PostListViewModel> response = new CustomResponse<PostListViewModel>
                     {
                         Message = Global.ResponseMessages.Success,
                         StatusCode = (int)HttpStatusCode.OK,
-                        Result = posts
+                        Result = new PostListViewModel
+                        {
+                            Posts = posts,
+                            PostCount = PostCount
+                        }
                     };
                     return Ok(response);
                 }
@@ -242,7 +261,7 @@ namespace BasketApi.Areas.SubAdmin.Controllers
 
         [HttpGet]
         [Route("GetPostsByUserId")]
-        public async Task<IHttpActionResult> GetPostsByUserId(int User_Id)
+        public async Task<IHttpActionResult> GetPostsByUserId(int User_Id, int PageSize = int.MaxValue, int PageNo = 0)
         {
             try
             {
@@ -252,21 +271,31 @@ namespace BasketApi.Areas.SubAdmin.Controllers
                     posts = ctx.Posts
                         .Include(x => x.User)
                         .Include(x => x.Medias)
-                        .Where(x => x.IsDeleted == false && x.User_Id == User_Id).ToList();
+                        .Where(x => x.User_Id == User_Id && x.IsDeleted == false).OrderByDescending(x => x.Id)
+                        .OrderByDescending(x => x.Id)
+                        .ToList();
+
+                    int PostCount = posts.Count();
+                    posts = posts.Skip(PageNo * PageSize).Take(PageSize).ToList();
 
                     foreach (Post post in posts)
                     {
-                        post.IsLiked = ctx.Likes.Any(x => x.Post_Id == post.Id && x.User_Id == User_Id);
-                        post.LikesCount = ctx.Posts.Sum(p => p.Likes.Where(x => x.Post_Id == post.Id).Count());
-                        post.CommentsCount = ctx.Posts.Sum(p => p.Comments.Where(x => x.Post_Id == post.Id).Count());
-                        post.ShareCount = ctx.Posts.Sum(p => p.Shares.Where(x => x.Post_Id == post.Id).Count());
+                        post.IsLiked = ctx.Likes.Any(x => x.Post_Id == post.Id && x.User_Id == User_Id && x.IsDeleted == false);
+                        post.LikesCount = ctx.Posts.Sum(p => p.Likes.Where(x => x.Post_Id == post.Id && x.IsDeleted == false).Count());
+                        post.CommentsCount = ctx.Posts.Sum(p => p.Comments.Where(x => x.Post_Id == post.Id && x.IsDeleted == false).Count());
+                        post.ShareCount = ctx.Posts.Sum(p => p.Shares.Where(x => x.Post_Id == post.Id && x.IsDeleted == false).Count());
+                        post.IsUserFollow = true;
                     }
 
-                    CustomResponse<List<Post>> response = new CustomResponse<List<Post>>
+                    CustomResponse<PostListViewModel> response = new CustomResponse<PostListViewModel>
                     {
                         Message = Global.ResponseMessages.Success,
                         StatusCode = (int)HttpStatusCode.OK,
-                        Result = posts
+                        Result = new PostListViewModel
+                        {
+                            Posts = posts,
+                            PostCount = PostCount
+                        }
                     };
                     return Ok(response);
                 }
@@ -288,26 +317,32 @@ namespace BasketApi.Areas.SubAdmin.Controllers
                     var userId = Convert.ToInt32(User.GetClaimValue("userid"));
 
                     Post post = new Post();
-                    post = ctx.Posts
+                    post = ctx.Posts.Include(x => x.User)
                         .FirstOrDefault(x => x.Id == Post_Id && x.IsDeleted == false);
 
-                    post.IsLiked = ctx.Likes.Any(x => x.Post_Id == Post_Id && x.User_Id == userId);
-                    post.LikesCount = ctx.Posts.Sum(p => p.Likes.Where(x => x.Post_Id == post.Id).Count());
-                    post.CommentsCount = ctx.Posts.Sum(p => p.Comments.Where(x => x.Post_Id == post.Id).Count());
-                    post.ShareCount = ctx.Posts.Sum(p => p.Shares.Where(x => x.Post_Id == post.Id).Count());
+                    post.IsLiked = ctx.Likes.Any(x => x.Post_Id == Post_Id && x.User_Id == userId && x.IsDeleted == false);
+                    post.LikesCount = ctx.Posts.Sum(p => p.Likes.Where(x => x.Post_Id == post.Id && x.IsDeleted == false).Count());
+                    post.CommentsCount = ctx.Posts.Sum(p => p.Comments.Where(x => x.Post_Id == post.Id && x.IsDeleted == false).Count());
+                    post.ShareCount = ctx.Posts.Sum(p => p.Shares.Where(x => x.Post_Id == post.Id && x.IsDeleted == false).Count());
 
                     // For comments and their child comments including self-like
 
-                    List<Comment> comments = ctx.Comments.Where(x => x.Post_Id == Post_Id).ToList();
+                    List<Comment> comments = ctx.Comments
+                        .Include(x => x.User)
+                        .Where(x => x.Post_Id == Post_Id && x.ParentComment_Id == 0 && x.IsDeleted == false).ToList();
                     foreach (Comment comment in comments)
                     {
-                        comment.ChildComments = ctx.Comments.Where(x => x.ParentComment_Id == comment.Id).ToList();
-                        comment.IsLiked = ctx.Likes.Any(x => x.Comment_Id == comment.Id && x.User_Id == userId);
+                        comment.ChildComments = ctx.Comments
+                            .Include(x => x.User)
+                            .Where(x => x.ParentComment_Id == comment.Id && x.IsDeleted == false).ToList();
+                        comment.IsLiked = ctx.Likes.Any(x => x.Comment_Id == comment.Id && x.User_Id == userId && x.IsDeleted == false);
                         foreach (Comment childComment in comment.ChildComments)
                         {
-                            childComment.IsLiked = ctx.Likes.Any(x => x.Comment_Id == childComment.Id && x.User_Id == userId);
+                            childComment.IsLiked = ctx.Likes.Any(x => x.Comment_Id == childComment.Id && x.User_Id == userId && x.IsDeleted == false);
                         }
                     }
+
+                    post.Comments = comments;
 
                     CustomResponse<Post> response = new CustomResponse<Post>
                     {
@@ -342,6 +377,36 @@ namespace BasketApi.Areas.SubAdmin.Controllers
                     };
 
                     ctx.Likes.Add(like);
+                    ctx.SaveChanges();
+
+                    CustomResponse<Like> response = new CustomResponse<Like>
+                    {
+                        Message = Global.ResponseMessages.Success,
+                        StatusCode = (int)HttpStatusCode.OK,
+                        Result = like
+                    };
+                    return Ok(response);
+                }
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(Utility.LogError(ex));
+            }
+        }
+
+        [HttpGet]
+        [Route("UnLikePost")]
+        public async Task<IHttpActionResult> UnLikePost(int Post_Id)
+        {
+            try
+            {
+                var userId = Convert.ToInt32(User.GetClaimValue("userid"));
+
+                using (RiscoContext ctx = new RiscoContext())
+                {
+
+                    Like like = ctx.Likes.FirstOrDefault(x => x.Post_Id == Post_Id && x.User_Id == userId && x.IsDeleted == false);
+                    like.IsDeleted = true;
                     ctx.SaveChanges();
 
                     CustomResponse<Like> response = new CustomResponse<Like>
@@ -395,37 +460,6 @@ namespace BasketApi.Areas.SubAdmin.Controllers
         }
 
         [HttpGet]
-        [Route("UnLikePost")]
-        public async Task<IHttpActionResult> UnLikePost(int Post_Id)
-        {
-            try
-            {
-                var userId = Convert.ToInt32(User.GetClaimValue("userid"));
-
-                using (RiscoContext ctx = new RiscoContext())
-                {
-
-                    Like like = ctx.Likes.FirstOrDefault(x => x.Post_Id == Post_Id);
-
-                    ctx.Likes.Remove(like);
-                    ctx.SaveChanges();
-
-                    CustomResponse<Like> response = new CustomResponse<Like>
-                    {
-                        Message = Global.ResponseMessages.Success,
-                        StatusCode = (int)HttpStatusCode.OK,
-                        Result = like
-                    };
-                    return Ok(response);
-                }
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(Utility.LogError(ex));
-            }
-        }
-
-        [HttpGet]
         [Route("UnLikeComment")]
         public async Task<IHttpActionResult> UnLikeComment(int Comment_Id)
         {
@@ -436,9 +470,8 @@ namespace BasketApi.Areas.SubAdmin.Controllers
                 using (RiscoContext ctx = new RiscoContext())
                 {
 
-                    Like like = ctx.Likes.FirstOrDefault(x => x.Comment_Id == Comment_Id);
-
-                    ctx.Likes.Remove(like);
+                    Like like = ctx.Likes.FirstOrDefault(x => x.Comment_Id == Comment_Id && x.User_Id == userId && x.IsDeleted == false);
+                    like.IsDeleted = true;
                     ctx.SaveChanges();
 
                     CustomResponse<Like> response = new CustomResponse<Like>
@@ -477,6 +510,8 @@ namespace BasketApi.Areas.SubAdmin.Controllers
                     ctx.Comments.Add(comment);
                     ctx.SaveChanges();
 
+                    SetTrends(Text: comment.Text, User_Id: userId, Comment_Id: comment.Id);
+
                     CustomResponse<Comment> response = new CustomResponse<Comment>
                     {
                         Message = Global.ResponseMessages.Success,
@@ -514,6 +549,8 @@ namespace BasketApi.Areas.SubAdmin.Controllers
                     ctx.Comments.Add(comment);
                     ctx.SaveChanges();
 
+                    SetTrends(Text: comment.Text, User_Id: userId, Comment_Id: comment.Id);
+
                     CustomResponse<Comment> response = new CustomResponse<Comment>
                     {
                         Message = Global.ResponseMessages.Success,
@@ -531,7 +568,7 @@ namespace BasketApi.Areas.SubAdmin.Controllers
 
         [HttpGet]
         [Route("Repost")]
-        public async Task<IHttpActionResult> Repost(int Post_Id)
+        public async Task<IHttpActionResult> Repost(int Post_Id, string Location)
         {
             try
             {
@@ -540,18 +577,21 @@ namespace BasketApi.Areas.SubAdmin.Controllers
                 using (RiscoContext ctx = new RiscoContext())
                 {
                     Post post = ctx.Posts
-                        .Include(x => x.Medias)
+                        .Include(x => x.Medias).AsNoTracking()
                         .FirstOrDefault(x => x.Id == Post_Id);
 
                     post.User_Id = userId;
+                    post.Location = Location;
                     post.CreatedDate = DateTime.UtcNow;
                     foreach (Media media in post.Medias)
                     {
-                        media.CreatedDate = DateTime.Now;
+                        media.CreatedDate = DateTime.UtcNow;
                     }
 
                     ctx.Posts.Add(post);
                     ctx.SaveChanges();
+
+                    SetTrends(Text: post.Text, User_Id: userId, Post_Id: post.Id);
 
                     Share share = new Share
                     {
@@ -559,6 +599,8 @@ namespace BasketApi.Areas.SubAdmin.Controllers
                         User_Id = userId,
                         CreatedDate = DateTime.UtcNow,
                     };
+
+
 
                     ctx.Shares.Add(share);
                     ctx.SaveChanges();
@@ -569,7 +611,7 @@ namespace BasketApi.Areas.SubAdmin.Controllers
                         StatusCode = (int)HttpStatusCode.OK,
                         Result = post
                     };
-                        return Ok(response);
+                    return Ok(response);
                 }
             }
             catch (Exception ex)
@@ -577,5 +619,144 @@ namespace BasketApi.Areas.SubAdmin.Controllers
                 return StatusCode(Utility.LogError(ex));
             }
         }
+
+        [HttpGet]
+        [Route("HidePost")]
+        public async Task<IHttpActionResult> HidePost(int Post_Id)
+        {
+            try
+            {
+                var userId = Convert.ToInt32(User.GetClaimValue("userid"));
+
+                using (RiscoContext ctx = new RiscoContext())
+                {
+                    Post post = ctx.Posts.FirstOrDefault(x => x.Id == Post_Id);
+
+                    HidePost hidePost = new HidePost
+                    {
+                        FirstUser_Id = userId,
+                        SecondUser_Id = post.User_Id,
+                        Post_Id = Post_Id,
+                        CreatedDate = DateTime.UtcNow
+                    };
+
+                    ctx.HidePosts.Add(hidePost);
+                    ctx.SaveChanges();
+
+                    CustomResponse<HidePost> response = new CustomResponse<HidePost>
+                    {
+                        Message = Global.ResponseMessages.Success,
+                        StatusCode = (int)HttpStatusCode.OK,
+                        Result = hidePost
+                    };
+                    return Ok(response);
+                }
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(Utility.LogError(ex));
+            }
+        }
+
+        [HttpGet]
+        [Route("HideAllPost")]
+        public async Task<IHttpActionResult> HideAllPost(int HideAllPostsUser_Id)
+        {
+            try
+            {
+                var userId = Convert.ToInt32(User.GetClaimValue("userid"));
+
+                using (RiscoContext ctx = new RiscoContext())
+                {
+                    HideAllPost hideAllPost = new HideAllPost
+                    {
+                        FirstUserAll_Id = userId,
+                        SecondUserAll_Id = HideAllPostsUser_Id,
+                        CreatedDate = DateTime.UtcNow
+                    };
+
+                    ctx.HideAllPosts.Add(hideAllPost);
+                    ctx.SaveChanges();
+
+                    CustomResponse<HideAllPost> response = new CustomResponse<HideAllPost>
+                    {
+                        Message = Global.ResponseMessages.Success,
+                        StatusCode = (int)HttpStatusCode.OK,
+                        Result = hideAllPost
+                    };
+                    return Ok(response);
+                }
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(Utility.LogError(ex));
+            }
+        }
+
+        [HttpGet]
+        [Route("GetTrends")]
+        public async Task<IHttpActionResult> GetTrends()
+        {
+            try
+            {
+                using (RiscoContext ctx = new RiscoContext())
+                {
+                    var userId = Convert.ToInt32(User.GetClaimValue("userid"));
+
+                    string query = "select top 20 Text, count(Id) as [Count] from trendlogs  group by Text order by Count desc";
+                    List<TrendBindingModel> trends = ctx.Database.SqlQuery<TrendBindingModel>(query).ToList();
+
+                    CustomResponse<TrendListViewModel> response = new CustomResponse<TrendListViewModel>
+                    {
+                        Message = Global.ResponseMessages.Success,
+                        StatusCode = (int)HttpStatusCode.OK,
+                        Result = new TrendListViewModel
+                        {
+                            Trends = trends
+                        }
+                    };
+                    return Ok(response);
+                }
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(Utility.LogError(ex));
+            }
+        }
+
+        #region Private Regions
+
+        private void SetTrends(string Text, int User_Id, int Post_Id = 0, int Comment_Id = 0)
+        {
+            try
+            {
+                var regex = new Regex(@"(?<=#)\w+");
+                var matches = regex.Matches(Text);
+
+                using (RiscoContext ctx = new RiscoContext())
+                {
+                    TrendLog trendLog;
+                    foreach (Match m in matches)
+                    {
+                        trendLog = new TrendLog
+                        {
+                            Text = "#" + m.Value,
+                            User_Id = User_Id,
+                            Post_Id = Post_Id,
+                            Comment_Id = Comment_Id,
+                            CreatedDate = DateTime.UtcNow,
+                        };
+                        ctx.TrendLogs.Add(trendLog);
+                    }
+
+                    ctx.SaveChanges();
+                }
+            }
+            catch (Exception ex)
+            {
+                Utility.LogError(ex);
+            }
+        }
+        #endregion
     }
 }

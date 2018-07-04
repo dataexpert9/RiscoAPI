@@ -106,6 +106,10 @@
     <Compile Include="Banner_Images.cs" />
     <Compile Include="Box.cs" />
     <Compile Include="Comment.cs" />
+    <Compile Include="HideAllPost.cs" />
+    <Compile Include="HidePost.cs" />
+    <Compile Include="FollowFollower.cs" />
+    <Compile Include="TrendLog.cs" />
     <Compile Include="Share.cs" />
     <Compile Include="Media.cs" />
     <Compile Include="Interest.cs" />

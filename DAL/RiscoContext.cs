@@ -65,6 +65,10 @@ namespace DAL
         public virtual DbSet<Like> Likes { get; set; }
         public virtual DbSet<Comment> Comments { get; set; }
         public virtual DbSet<Share> Shares { get; set; }
+        public virtual DbSet<TrendLog> TrendLogs { get; set; }
+        public virtual DbSet<HidePost> HidePosts { get; set; }
+        public virtual DbSet<HideAllPost> HideAllPosts { get; set; }
+        public virtual DbSet<FollowFollower> FollowFollowers { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -488,6 +492,48 @@ namespace DAL
                 .HasForeignKey(e => e.User_Id)
                 .WillCascadeOnDelete(false);
 
+            modelBuilder.Entity<User>()
+                .HasMany(e => e.TrendLogs)
+                .WithRequired(e => e.User)
+                .HasForeignKey(e => e.User_Id)
+                .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<User>()
+                .HasMany(e => e.FirstUserHidePosts)
+                .WithRequired(e => e.FirstUser)
+                .HasForeignKey(e => e.FirstUser_Id)
+                .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<User>()
+                .HasMany(e => e.SecondUserHidePosts)
+                .WithRequired(e => e.SecondUser)
+                .HasForeignKey(e => e.SecondUser_Id)
+                .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<User>()
+                .HasMany(e => e.FirstUserHideAllPosts)
+                .WithRequired(e => e.FirstUserAll)
+                .HasForeignKey(e => e.FirstUserAll_Id)
+                .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<User>()
+                .HasMany(e => e.SecondUserHideAllPosts)
+                .WithRequired(e => e.SecondUserAll)
+                .HasForeignKey(e => e.SecondUserAll_Id)
+                .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<User>()
+                .HasMany(e => e.FirstUserFollowFollower)
+                .WithRequired(e => e.FirstUser)
+                .HasForeignKey(e => e.FirstUser_Id)
+                .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<User>()
+                .HasMany(e => e.SecondUserFollowFollower)
+                .WithRequired(e => e.SecondUser)
+                .HasForeignKey(e => e.SecondUser_Id)
+                .WillCascadeOnDelete(false);
+
             modelBuilder.Entity<Post>()
                 .HasMany(e => e.Medias)
                 .WithRequired(e => e.Post)
@@ -512,11 +558,29 @@ namespace DAL
                 .HasForeignKey(e => e.Post_Id)
                 .WillCascadeOnDelete(false);
 
+            //modelBuilder.Entity<Post>()
+            //    .HasMany(e => e.TrendLogs)
+            //    .WithOptional(e => e.Post)
+            //    .HasForeignKey(e => e.Post_Id)
+            //    .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<Post>()
+                .HasMany(e => e.HidePosts)
+                .WithRequired(e => e.Post)
+                .HasForeignKey(e => e.Post_Id)
+                .WillCascadeOnDelete(false);
+
             modelBuilder.Entity<Comment>()
                 .HasMany(e => e.Likes)
                 .WithOptional(e => e.Comment)
                 .HasForeignKey(e => e.Comment_Id)
                 .WillCascadeOnDelete(false);
+
+            //modelBuilder.Entity<Comment>()
+            //    .HasMany(e => e.TrendLogs)
+            //    .WithOptional(e => e.Comment)
+            //    .HasForeignKey(e => e.Comment_Id)
+            //    .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<UserGroup>()
                 .HasMany(e => e.Posts)

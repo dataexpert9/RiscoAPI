@@ -314,11 +314,13 @@
     <Compile Include="Areas\Admin\Controllers\CategoryController.cs" />
     <Compile Include="Areas\Admin\Controllers\CommonController.cs" />
     <Compile Include="Areas\Admin\Controllers\PackageController.cs" />
+    <Compile Include="Areas\Admin\Controllers\FollowFollower.cs" />
     <Compile Include="Areas\Admin\Controllers\PostController.cs" />
     <Compile Include="Areas\Admin\Controllers\ProductController.cs" />
     <Compile Include="Areas\Admin\Controllers\StoresController.cs" />
     <Compile Include="Areas\Admin\Models\BindingModel.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\ViewModels\PostListViewModel.cs" />
     <Compile Include="Areas\Admin\ViewModels\ProductCountViewModel.cs" />
     <Compile Include="Areas\Admin\ViewModels\ProductsViewModel.cs" />
     <Compile Include="Areas\Admin\ViewModels\StoreCountViewModel.cs" />
@@ -358,6 +360,7 @@
     <Compile Include="BindingModels\ChangeOrderStatusBindingModel.cs" />
     <Compile Include="BindingModels\ContentBindingModel.cs" />
     <Compile Include="BindingModels\CreateCommentBindingModel.cs" />
+    <Compile Include="BindingModels\TrendBindingModel.cs" />
     <Compile Include="BindingModels\NotificationBindingModel.cs" />
     <Compile Include="BindingModels\AccountSettingsBindingModel.cs" />
     <Compile Include="BindingModels\CreatePostBindingModel.cs" />

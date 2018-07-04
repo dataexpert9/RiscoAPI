@@ -32,6 +32,13 @@ namespace DAL
             Likes = new HashSet<Like>();
             Comments = new HashSet<Comment>();
             Shares = new HashSet<Share>();
+            TrendLogs = new HashSet<TrendLog>();
+            FirstUserHidePosts = new HashSet<HidePost>();
+            SecondUserHidePosts = new HashSet<HidePost>();
+            FirstUserHideAllPosts = new HashSet<HideAllPost>();
+            SecondUserHideAllPosts = new HashSet<HideAllPost>();
+            FirstUserFollowFollower = new HashSet<FollowFollower>();
+            SecondUserFollowFollower = new HashSet<FollowFollower>();
         }
 
         public int Id { get; set; }
@@ -132,6 +139,34 @@ namespace DAL
         [JsonIgnore]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Share> Shares { get; set; }
+
+        [JsonIgnore]
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<TrendLog> TrendLogs { get; set; }
+
+        [JsonIgnore]
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<HidePost> FirstUserHidePosts { get; set; }
+
+        [JsonIgnore]
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<HidePost> SecondUserHidePosts { get; set; }
+
+        [JsonIgnore]
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<HideAllPost> FirstUserHideAllPosts { get; set; }
+
+        [JsonIgnore]
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<HideAllPost> SecondUserHideAllPosts { get; set; }
+
+        [JsonIgnore]
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<FollowFollower> FirstUserFollowFollower { get; set; }
+
+        [JsonIgnore]
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<FollowFollower> SecondUserFollowFollower { get; set; }
 
         public bool IsNotificationsOn { get; set; }
 
