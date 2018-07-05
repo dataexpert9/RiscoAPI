@@ -69,7 +69,11 @@ namespace DAL
         public virtual DbSet<HidePost> HidePosts { get; set; }
         public virtual DbSet<HideAllPost> HideAllPosts { get; set; }
         public virtual DbSet<FollowFollower> FollowFollowers { get; set; }
+        public virtual DbSet<TurnOffNotification> TurnOffNotifications { get; set; }
+        public virtual DbSet<ReportPost> ReportPosts { get; set; }
+        public virtual DbSet<TopFollowerLog> TopFollowerLogs { get; set; }
 
+        
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<User>()
@@ -534,6 +538,30 @@ namespace DAL
                 .HasForeignKey(e => e.SecondUser_Id)
                 .WillCascadeOnDelete(false);
 
+            modelBuilder.Entity<User>()
+                .HasMany(e => e.TurnOffNotifications)
+                .WithRequired(e => e.User)
+                .HasForeignKey(e => e.User_Id)
+                .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<User>()
+                .HasMany(e => e.ReportPosts)
+                .WithRequired(e => e.User)
+                .HasForeignKey(e => e.User_Id)
+                .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<User>()
+                .HasMany(e => e.FirstUserTopFollowerLog)
+                .WithRequired(e => e.FirstUser)
+                .HasForeignKey(e => e.FirstUser_Id)
+                .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<User>()
+                .HasMany(e => e.SecondUserTopFollowerLog)
+                .WithRequired(e => e.SecondUser)
+                .HasForeignKey(e => e.SecondUser_Id)
+                .WillCascadeOnDelete(false);
+
             modelBuilder.Entity<Post>()
                 .HasMany(e => e.Medias)
                 .WithRequired(e => e.Post)
@@ -566,6 +594,18 @@ namespace DAL
 
             modelBuilder.Entity<Post>()
                 .HasMany(e => e.HidePosts)
+                .WithRequired(e => e.Post)
+                .HasForeignKey(e => e.Post_Id)
+                .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<Post>()
+                .HasMany(e => e.TurnOffNotifications)
+                .WithRequired(e => e.Post)
+                .HasForeignKey(e => e.Post_Id)
+                .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<Post>()
+                .HasMany(e => e.ReportPosts)
                 .WithRequired(e => e.Post)
                 .HasForeignKey(e => e.Post_Id)
                 .WillCascadeOnDelete(false);

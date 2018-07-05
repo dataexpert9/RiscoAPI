@@ -379,6 +379,9 @@ namespace BasketApi.Areas.SubAdmin.Controllers
                     ctx.Likes.Add(like);
                     ctx.SaveChanges();
 
+                    int SecondUser_Id = ctx.Posts.FirstOrDefault(x => x.Id == Post_Id && x.IsDeleted == false).User_Id;
+                    SetTopFollowerLog(FirstUser_Id: userId, SecondUser_Id: SecondUser_Id);
+
                     CustomResponse<Like> response = new CustomResponse<Like>
                     {
                         Message = Global.ResponseMessages.Success,
@@ -512,6 +515,8 @@ namespace BasketApi.Areas.SubAdmin.Controllers
 
                     SetTrends(Text: comment.Text, User_Id: userId, Comment_Id: comment.Id);
 
+                    int SecondUser_Id = ctx.Posts.FirstOrDefault(x => x.Id == model.Post_Id && x.IsDeleted == false).User_Id;
+                    SetTopFollowerLog(FirstUser_Id: userId, SecondUser_Id: SecondUser_Id);
                     CustomResponse<Comment> response = new CustomResponse<Comment>
                     {
                         Message = Global.ResponseMessages.Success,
@@ -550,6 +555,9 @@ namespace BasketApi.Areas.SubAdmin.Controllers
                     ctx.SaveChanges();
 
                     SetTrends(Text: comment.Text, User_Id: userId, Comment_Id: comment.Id);
+
+                    int SecondUser_Id = ctx.Posts.FirstOrDefault(x => x.Id == model.Post_Id && x.IsDeleted == false).User_Id;
+                    SetTopFollowerLog(FirstUser_Id: userId, SecondUser_Id: SecondUser_Id);
 
                     CustomResponse<Comment> response = new CustomResponse<Comment>
                     {
@@ -724,6 +732,78 @@ namespace BasketApi.Areas.SubAdmin.Controllers
             }
         }
 
+        [HttpGet]
+        [Route("TurnOffNotifications")]
+        public async Task<IHttpActionResult> TurnOffNotifications(int Post_Id)
+        {
+            try
+            {
+                var userId = Convert.ToInt32(User.GetClaimValue("userid"));
+
+                using (RiscoContext ctx = new RiscoContext())
+                {
+                    TurnOffNotification turnOffNotification = new TurnOffNotification
+                    {
+                        User_Id = userId,
+                        Post_Id = Post_Id,
+                        CreatedDate = DateTime.UtcNow
+                    };
+
+                    ctx.TurnOffNotifications.Add(turnOffNotification);
+                    ctx.SaveChanges();
+
+                    CustomResponse<TurnOffNotification> response = new CustomResponse<TurnOffNotification>
+                    {
+                        Message = Global.ResponseMessages.Success,
+                        StatusCode = (int)HttpStatusCode.OK,
+                        Result = turnOffNotification
+                    };
+                    return Ok(response);
+                }
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(Utility.LogError(ex));
+            }
+        }
+
+        [HttpGet]
+        [Route("ReportPost")]
+        public async Task<IHttpActionResult> ReportPost(int Post_Id, int ReportType, string Text)
+        {
+            try
+            {
+                var userId = Convert.ToInt32(User.GetClaimValue("userid"));
+
+                using (RiscoContext ctx = new RiscoContext())
+                {
+                    ReportPost reportPost = new ReportPost
+                    {
+                        User_Id = userId,
+                        Post_Id = Post_Id,
+                        ReportType = ReportType,
+                        Text = Text,
+                        CreatedDate = DateTime.UtcNow
+                    };
+
+                    ctx.ReportPosts.Add(reportPost);
+                    ctx.SaveChanges();
+
+                    CustomResponse<ReportPost> response = new CustomResponse<ReportPost>
+                    {
+                        Message = Global.ResponseMessages.Success,
+                        StatusCode = (int)HttpStatusCode.OK,
+                        Result = reportPost
+                    };
+                    return Ok(response);
+                }
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(Utility.LogError(ex));
+            }
+        }
+
         #region Private Regions
 
         private void SetTrends(string Text, int User_Id, int Post_Id = 0, int Comment_Id = 0)
@@ -750,6 +830,32 @@ namespace BasketApi.Areas.SubAdmin.Controllers
                     }
 
                     ctx.SaveChanges();
+                }
+            }
+            catch (Exception ex)
+            {
+                Utility.LogError(ex);
+            }
+        }
+
+        private void SetTopFollowerLog(int FirstUser_Id, int SecondUser_Id)
+        {
+            try
+            {
+                using (RiscoContext ctx = new RiscoContext())
+                {
+                    if(FirstUser_Id != SecondUser_Id)
+                    {
+                        TopFollowerLog topFollowerLog = new TopFollowerLog
+                        {
+                            FirstUser_Id = FirstUser_Id,
+                            SecondUser_Id = SecondUser_Id,
+                            CreatedDate = DateTime.UtcNow
+                        };
+
+                        ctx.TopFollowerLogs.Add(topFollowerLog);
+                        ctx.SaveChanges();
+                    }
                 }
             }
             catch (Exception ex)

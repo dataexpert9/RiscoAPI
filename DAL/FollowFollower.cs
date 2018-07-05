@@ -27,5 +27,8 @@ namespace DAL
         public DateTime CreatedDate { get; set; }
 
         public bool IsDeleted { get; set; }
+
+        [NotMapped]
+        public bool IsFollowing { get; set; }
     }
 }

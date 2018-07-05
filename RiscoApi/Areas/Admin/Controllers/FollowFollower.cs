@@ -103,6 +103,11 @@ namespace BasketApi.Areas.SubAdmin.Controllers
                         .Where(x => x.IsDeleted == false && x.SecondUser_Id == userId)
                         .ToList();
 
+                    foreach (FollowFollower followFoller in followFollowers)
+                    {
+                        followFoller.IsFollowing = ctx.FollowFollowers.Any(x => x.FirstUser_Id == userId && x.SecondUser_Id == followFoller.FirstUser_Id);
+                    }
+
                     CustomResponse<List<FollowFollower>> response = new CustomResponse<List<FollowFollower>>
                     {
                         Message = Global.ResponseMessages.Success,
@@ -150,6 +155,43 @@ namespace BasketApi.Areas.SubAdmin.Controllers
             }
         }
 
+        [HttpGet]
+        [Route("GetTopFollowers")]
+        public async Task<IHttpActionResult> GetTopFollowers()
+        {
+            try
+            {
+                using (RiscoContext ctx = new RiscoContext())
+                {
+                    var userId = Convert.ToInt32(User.GetClaimValue("userid"));
+
+                    string query = @"select top 5 FirstUser_Id, count(Id) as [Count] from TopFollowerLogs where  SecondUser_Id = " + userId +
+@" and FirstUser_Id in (select FirstUser_Id from FollowFollowers f where f.IsDeleted = 0 and f.SecondUser_Id = " + userId + 
+@") group by FirstUser_Id  
+order by Count desc";
+                    List<TopFollowersBindingModel> topFollowers = ctx.Database.SqlQuery<TopFollowersBindingModel>(query).ToList();
+
+                    List<FollowFollower> followFollowers = new List<FollowFollower>();
+
+                    followFollowers = ctx.FollowFollowers
+                        .Include(x => x.FirstUser)
+                        .Where(x => x.IsDeleted == false && x.SecondUser_Id == userId && topFollowers.Select(y => y.FirstUser_Id).ToList().Contains(x.FirstUser_Id))
+                        .ToList();
+
+                    CustomResponse<List<FollowFollower>> response = new CustomResponse<List<FollowFollower>>
+                    {
+                        Message = Global.ResponseMessages.Success,
+                        StatusCode = (int)HttpStatusCode.OK,
+                        Result = followFollowers
+                    };
+                    return Ok(response);
+                }
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(Utility.LogError(ex));
+            }
+        }
 
         #region Private Regions
         #endregion

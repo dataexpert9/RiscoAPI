@@ -74,6 +74,10 @@ namespace BasketApi.Controllers
 
 					if (userModel != null)
 					{
+						userModel.FollowingCount = ctx.FollowFollowers.Where(x => x.FirstUser_Id == userModel.Id && x.IsDeleted == false).Count();
+						userModel.FollowersCount = ctx.FollowFollowers.Where(x => x.SecondUser_Id == userModel.Id && x.IsDeleted == false).Count();
+						userModel.PostCount = ctx.Posts.Where(x => x.User_Id == userModel.Id && x.IsDeleted == false).Count();
+
 						await userModel.GenerateToken(Request);
 						BasketSettings.LoadSettings();
 						userModel.BasketSettings = BasketSettings.Settings;
@@ -85,7 +89,6 @@ namespace BasketApi.Controllers
 						}
 						return Ok(new CustomResponse<User> { Message = Global.ResponseMessages.Success, StatusCode = (int)HttpStatusCode.OK, Result = userModel });
 					}
-
 
 					return Content(HttpStatusCode.OK, new CustomResponse<Error>
 					{
@@ -472,34 +475,34 @@ namespace BasketApi.Controllers
 						});
 					}
 					else if (ctx.Users.Any(x => x.Phone == model.PhoneNumber && x.IsDeleted == false))
-                    {
-                        return Content(HttpStatusCode.OK, new CustomResponse<Error>
-                        {
-                            Message = "Conflict",
-                            StatusCode = (int)HttpStatusCode.Conflict,
-                            Result = new Error { ErrorMessage = "User with entered phone number already exists." }
-                        });
-                    }
-                    else
 					{
-                        if (ctx.Users.Any(x => x.UserName == model.UserName && x.IsDeleted == false))
-                        {
-                            return Content(HttpStatusCode.OK, new CustomResponse<Error>
-                            {
-                                Message = "Conflict",
-                                StatusCode = (int)HttpStatusCode.Conflict,
-                                Result = new Error { ErrorMessage = "User Name already exists." }
-                            });
-                        }
-                    }
+						return Content(HttpStatusCode.OK, new CustomResponse<Error>
+						{
+							Message = "Conflict",
+							StatusCode = (int)HttpStatusCode.Conflict,
+							Result = new Error { ErrorMessage = "User with entered phone number already exists." }
+						});
+					}
+					else
+					{
+						if (ctx.Users.Any(x => x.UserName == model.UserName && x.IsDeleted == false))
+						{
+							return Content(HttpStatusCode.OK, new CustomResponse<Error>
+							{
+								Message = "Conflict",
+								StatusCode = (int)HttpStatusCode.Conflict,
+								Result = new Error { ErrorMessage = "User Name already exists." }
+							});
+						}
+					}
 
 
-                    User userModel = new User
+					User userModel = new User
 					{
 						//FirstName = model.FirstName,
 						//LastName = model.LastName,
 						FullName = model.FullName,
-                        UserName = model.UserName,
+						UserName = model.UserName,
 						Email = String.IsNullOrEmpty(model.Email) ? null : model.Email,
 						Phone = String.IsNullOrEmpty(model.PhoneNumber) ? null : model.PhoneNumber,
 						Password = CryptoHelper.Hash(model.Password),
@@ -664,8 +667,9 @@ namespace BasketApi.Controllers
 				}
 
 				MessageViewModel successResponse = new MessageViewModel { StatusCode = "200 OK", Details = "Image Updated Successfully." };
-				var filePath = Utility.BaseUrl + ConfigurationManager.AppSettings["UserImageFolderPath"] + Path.GetFileName(newFullPath);
-				ImagePathViewModel model = new ImagePathViewModel { Path = filePath };
+				//var filePath = Utility.BaseUrl + ConfigurationManager.AppSettings["UserImageFolderPath"] + Path.GetFileName(newFullPath);
+                var filePath = ConfigurationManager.AppSettings["UserImageFolderPath"] + Path.GetFileName(newFullPath);
+                ImagePathViewModel model = new ImagePathViewModel { Path = filePath };
 
 				using (RiscoContext ctx = new RiscoContext())
 				{
@@ -681,12 +685,120 @@ namespace BasketApi.Controllers
 			}
 		}
 
-		/// <summary>
-		/// Change user password
-		/// </summary>
-		/// <param name="model"></param>
-		/// <returns></returns>
-		[Authorize]
+        [Route("UploadCoverImage")]
+        [Authorize]
+        public async Task<IHttpActionResult> UploadCoverImage()
+        {
+            try
+            {
+                var httpRequest = HttpContext.Current.Request;
+                string newFullPath = string.Empty;
+                string fileNameOnly = string.Empty;
+
+                #region Validations
+                var userEmail = User.Identity.Name;
+                if (string.IsNullOrEmpty(userEmail))
+                {
+                    throw new Exception("User Email is empty in user.identity.name.");
+                }
+                else if (!Request.Content.IsMimeMultipartContent())
+                {
+                    return Content(HttpStatusCode.OK, new CustomResponse<Error>
+                    {
+                        Message = "UnsupportedMediaType",
+                        StatusCode = (int)HttpStatusCode.UnsupportedMediaType,
+                        Result = new Error { ErrorMessage = "Multipart data is not included in request." }
+                    });
+                }
+                else if (httpRequest.Files.Count == 0)
+                {
+                    return Content(HttpStatusCode.OK, new CustomResponse<Error>
+                    {
+                        Message = "NotFound",
+                        StatusCode = (int)HttpStatusCode.NotFound,
+                        Result = new Error { ErrorMessage = "Image not found, please upload an image." }
+                    });
+                }
+                else if (httpRequest.Files.Count > 1)
+                {
+                    return Content(HttpStatusCode.OK, new CustomResponse<Error>
+                    {
+                        Message = "UnsupportedMediaType",
+                        StatusCode = (int)HttpStatusCode.UnsupportedMediaType,
+                        Result = new Error { ErrorMessage = "Multiple images are not allowed. Please upload 1 image." }
+                    });
+                }
+                #endregion
+
+                var postedFile = httpRequest.Files[0];
+
+                if (postedFile != null && postedFile.ContentLength > 0)
+                {
+
+                    int MaxContentLength = 1024 * 1024 * 10; //Size = 1 MB  
+
+                    IList<string> AllowedFileExtensions = new List<string> { ".jpg", ".gif", ".png" };
+                    var ext = postedFile.FileName.Substring(postedFile.FileName.LastIndexOf('.'));
+                    var extension = ext.ToLower();
+                    if (!AllowedFileExtensions.Contains(extension))
+                    {
+                        return Content(HttpStatusCode.OK, new CustomResponse<Error>
+                        {
+                            Message = "UnsupportedMediaType",
+                            StatusCode = (int)HttpStatusCode.UnsupportedMediaType,
+                            Result = new Error { ErrorMessage = "Please Upload image of type .jpg, .gif, .png." }
+                        });
+                    }
+                    else if (postedFile.ContentLength > MaxContentLength)
+                    {
+
+                        return Content(HttpStatusCode.OK, new CustomResponse<Error>
+                        {
+                            Message = "UnsupportedMediaType",
+                            StatusCode = (int)HttpStatusCode.UnsupportedMediaType,
+                            Result = new Error { ErrorMessage = "Please Upload a file upto 1 mb." }
+                        });
+                    }
+                    else
+                    {
+                        int count = 1;
+                        fileNameOnly = Path.GetFileNameWithoutExtension(postedFile.FileName);
+                        newFullPath = HttpContext.Current.Server.MapPath("~/" + ConfigurationManager.AppSettings["UserImageFolderPath"] + postedFile.FileName);
+
+                        while (File.Exists(newFullPath))
+                        {
+                            string tempFileName = string.Format("{0}({1})", fileNameOnly, count++);
+                            newFullPath = HttpContext.Current.Server.MapPath("~/" + ConfigurationManager.AppSettings["UserImageFolderPath"] + tempFileName + extension);
+                        }
+                        postedFile.SaveAs(newFullPath);
+                    }
+                }
+
+                MessageViewModel successResponse = new MessageViewModel { StatusCode = "200 OK", Details = "Image Updated Successfully." };
+                //var filePath = Utility.BaseUrl + ConfigurationManager.AppSettings["UserImageFolderPath"] + Path.GetFileName(newFullPath);
+                var filePath = ConfigurationManager.AppSettings["UserImageFolderPath"] + Path.GetFileName(newFullPath);
+                ImagePathViewModel model = new ImagePathViewModel { Path = filePath };
+
+                using (RiscoContext ctx = new RiscoContext())
+                {
+                    ctx.Users.FirstOrDefault(x => x.Email == userEmail).CoverPictureUrl = filePath;
+                    ctx.SaveChanges();
+                }
+
+                return Content(HttpStatusCode.OK, model);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(Utility.LogError(ex));
+            }
+        }
+
+        /// <summary>
+        /// Change user password
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
+        [Authorize]
 		[Route("ChangePassword")]
 		public async Task<IHttpActionResult> ChangePassword(SetPasswordBindingModel model)
 		{
@@ -1567,6 +1679,10 @@ namespace BasketApi.Controllers
 
 					if (userModel != null)
 					{
+						userModel.FollowingCount = ctx.FollowFollowers.Where(x => x.FirstUser_Id == userModel.Id && x.IsDeleted == false).Count();
+						userModel.FollowersCount = ctx.FollowFollowers.Where(x => x.SecondUser_Id == userModel.Id && x.IsDeleted == false).Count();
+						userModel.PostCount = ctx.Posts.Where(x => x.User_Id == userModel.Id && x.IsDeleted == false).Count();
+
 						BasketSettings.LoadSettings();
 						await userModel.GenerateToken(Request);
 						userModel.BasketSettings = BasketSettings.Settings;

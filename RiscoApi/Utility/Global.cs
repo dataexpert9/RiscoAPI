@@ -168,7 +168,15 @@ namespace BasketApi
             NotAllowed = 4
         }
 
-      
+        public enum ReportPostTypes
+        {
+            Spam = 1,
+            HateSpeech = 2,
+            Violence = 3,
+            Duplicate = 4
+        }
+
+
 
         public class ResponseMessages
         {

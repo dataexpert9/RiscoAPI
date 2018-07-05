@@ -39,6 +39,10 @@ namespace DAL
             SecondUserHideAllPosts = new HashSet<HideAllPost>();
             FirstUserFollowFollower = new HashSet<FollowFollower>();
             SecondUserFollowFollower = new HashSet<FollowFollower>();
+            TurnOffNotifications = new HashSet<TurnOffNotification>();
+            ReportPosts = new HashSet<ReportPost>();
+            FirstUserTopFollowerLog = new HashSet<TopFollowerLog>();
+            SecondUserTopFollowerLog = new HashSet<TopFollowerLog>();
         }
 
         public int Id { get; set; }
@@ -53,6 +57,8 @@ namespace DAL
         public string FullName { get; set; }
 
         public string ProfilePictureUrl { get; set; }
+
+        public string CoverPictureUrl { get; set; }
 
         public string Email { get; set; }
 
@@ -167,6 +173,23 @@ namespace DAL
         [JsonIgnore]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<FollowFollower> SecondUserFollowFollower { get; set; }
+
+        [JsonIgnore]
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<TurnOffNotification> TurnOffNotifications { get; set; }
+
+        [JsonIgnore]
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ReportPost> ReportPosts { get; set; }
+
+        [JsonIgnore]
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<TopFollowerLog> FirstUserTopFollowerLog { get; set; }
+
+        [JsonIgnore]
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<TopFollowerLog> SecondUserTopFollowerLog { get; set; }
+
 
         public bool IsNotificationsOn { get; set; }
 

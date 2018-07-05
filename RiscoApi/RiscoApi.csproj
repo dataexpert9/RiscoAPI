@@ -360,6 +360,7 @@
     <Compile Include="BindingModels\ChangeOrderStatusBindingModel.cs" />
     <Compile Include="BindingModels\ContentBindingModel.cs" />
     <Compile Include="BindingModels\CreateCommentBindingModel.cs" />
+    <Compile Include="BindingModels\TopFollowresBindingModel.cs" />
     <Compile Include="BindingModels\TrendBindingModel.cs" />
     <Compile Include="BindingModels\NotificationBindingModel.cs" />
     <Compile Include="BindingModels\AccountSettingsBindingModel.cs" />

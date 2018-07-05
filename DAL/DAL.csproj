@@ -109,6 +109,9 @@
     <Compile Include="HideAllPost.cs" />
     <Compile Include="HidePost.cs" />
     <Compile Include="FollowFollower.cs" />
+    <Compile Include="TopFollowerLog.cs" />
+    <Compile Include="ReportPost.cs" />
+    <Compile Include="TurnOffNotification.cs" />
     <Compile Include="TrendLog.cs" />
     <Compile Include="Share.cs" />
     <Compile Include="Media.cs" />

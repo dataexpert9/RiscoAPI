@@ -18,6 +18,8 @@ namespace DAL
             Shares = new HashSet<Share>();
             //TrendLogs = new HashSet<TrendLog>();
             HidePosts = new HashSet<HidePost>();
+            TurnOffNotifications = new HashSet<TurnOffNotification>();
+            ReportPosts = new HashSet<ReportPost>();
         }
 
         public int Id { get; set; }
@@ -63,6 +65,14 @@ namespace DAL
         [JsonIgnore]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<HidePost> HidePosts { get; set; }
+
+        [JsonIgnore]
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<TurnOffNotification> TurnOffNotifications { get; set; }
+
+        [JsonIgnore]
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ReportPost> ReportPosts { get; set; }
 
         [NotMapped]
         public bool IsLiked { get; set; }
