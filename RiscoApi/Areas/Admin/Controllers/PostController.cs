@@ -364,7 +364,7 @@ namespace BasketApi.Areas.SubAdmin.Controllers
         public async Task<IHttpActionResult> LikePost(int Post_Id)
         {
             try
-            {
+            { 
                 var userId = Convert.ToInt32(User.GetClaimValue("userid"));
 
                 using (RiscoContext ctx = new RiscoContext())
