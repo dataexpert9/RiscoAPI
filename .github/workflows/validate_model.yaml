@@ -1,0 +1,53 @@
+name: validate model Architecture and Dataset
+on:
+    push:
+      branches:
+        - 'active'
+      paths:
+        - data/*.yaml
+        - dataset
+        - model/*.py
+
+    # - pull_request
+    # - workflow_dispatch
+jobs:
+    validate_dataset:
+        name: data_validation_job
+        runs-on: ubuntu-20.04
+        steps:
+            - uses: actions/checkout@v3
+            - name: env setup
+              run: |
+                echo "starting PR"
+                pip install -r deps/test-req.txt
+            - name: dataset_test
+              run: |
+                python -m pytest -k test_dataset -v 
+    validate_model:
+        name: model_validation_job
+        runs-on: ubuntu-20.04
+        steps:
+            - uses: actions/checkout@v3
+            - name: env setup
+              run: |
+                echo "Building env for testing model"
+                pip install -r deps/test-req.txt
+            - name: model_test
+              run: |
+                python -m pytest -k test_model -v 
+    
+    model_training:
+        needs: 
+            - validate_dataset
+            - validate_model
+        runs-on: ubuntu-20.04
+        steps:
+            - uses: actions/checkout@v3
+            - name: env setup
+              run: |
+                echo "mock env setup"
+                # pip install -r deps/train_req.txt
+            - name: traina model
+              run: |
+                echo "Well, maybe oneday i will write this stuff :)"
+                # python train.py
